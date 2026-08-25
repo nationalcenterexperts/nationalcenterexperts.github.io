@@ -21,7 +21,7 @@ inside the Resources section of `docs/index.html`.
 
 - All public course sections and navigation
 - Course images and organizer photographs
-- Schedule, participants, and contact information
+- Schedule, participant names, and organizer contact information
 - Downloadable full-course calendar file
 - Responsive desktop and mobile styling
 

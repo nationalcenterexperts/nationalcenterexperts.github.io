@@ -166,9 +166,9 @@
     document.getElementById("sessionList").innerHTML = sessions.map((date,index) => `<div class="session"><span>${String(index+1).padStart(2,"0")}</span><time>${date.toUpperCase()}</time><div><h3>Week ${index+1}</h3><small>Topic to be announced</small></div><span class="sessionModerator"><small>MODERATOR</small><b>To be announced</b></span><time class="sessionTime">11:30–13:00</time></div>`).join("");
 
     const participants = [
-      ["Phi H. Hoang","PHoang@agcenter.lsu.edu"],["Sydney Barker","SBarker@agcenter.lsu.edu"],["Deborah Obadofin","dobado1@lsu.edu"],["Nate Semmes","nate.semmes@gmail.com"],["Jack Koch","JKoch@agcenter.lsu.edu"],["Irene Marti Gil","IMartiGil@agcenter.lsu.edu"],["Christopher K. Toepfer","CToepfer@agcenter.lsu.edu"],["Owen Plaisance","OPlaisance@agcenter.lsu.edu"],["Nicholas Conrad Coxe","NCoxe@agcenter.lsu.edu"],["Elise R. Harmon","EHarmon@agcenter.lsu.edu"],["Thaiza Rodrigues de Freitas","TRodriguesdeFreitas@agcenter.lsu.edu"],["Mohsen Norouzi","mnorou2@lsu.edu"],["Seyedmajid Hosseini","shoss11@lsu.edu"],["Victoria E. Denham","VDenham@agcenter.lsu.edu"],["Johnnie Kelley","JKelley@agcenter.lsu.edu"],["Catherine Norris","CNorris@agcenter.lsu.edu"],["Calley Chauvin","CChauvin@agcenter.lsu.edu"],["Pushpita Nag","PNag@agcenter.lsu.edu"],["Gabrielle Bush","GBush@agcenter.lsu.edu"],["Lillian Bodi","LBodi@agcenter.lsu.edu"]
+      "Phi H. Hoang","Sydney Barker","Deborah Obadofin","Nate Semmes","Jack Koch","Irene Marti Gil","Christopher K. Toepfer","Owen Plaisance","Nicholas Conrad Coxe","Elise R. Harmon","Thaiza Rodrigues de Freitas","Mohsen Norouzi","Seyedmajid Hosseini","Victoria E. Denham","Johnnie Kelley","Catherine Norris","Calley Chauvin","Pushpita Nag","Gabrielle Bush","Lillian Bodi"
     ];
-    document.getElementById("participantList").innerHTML = participants.map(([name,email]) => `<article><b>${name}</b><a href="mailto:${email}">${email}</a></article>`).join("");
+    document.getElementById("participantList").innerHTML = participants.map(name => `<article><b>${name}</b></article>`).join("");
     openTab(location.hash.slice(1), false);
   </script>
 </body>
