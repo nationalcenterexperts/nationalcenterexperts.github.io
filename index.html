@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RNR 7029 — Building National Centers, Fall 2026 at Louisiana State University.">
+  <meta property="og:title" content="RNR 7029 | Building National Centers">
+  <meta property="og:description" content="Course hub for RNR 7029 — Building National Centers at Louisiana State University.">
+  <meta property="og:type" content="website">
+  <title>RNR 7029 | Building National Centers</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/site.css">
+  <style>
+    .staticPanel[hidden] { display: none !important; }
+    .staticPanel { animation: windowIn .3s ease-out; }
+    .staticNotice { margin: 30px 0 0; padding: 18px 20px; border: 1px solid var(--line); border-radius: 10px; background: #edf4f1; color: #50656b; font-size: 11px; line-height: 1.6; }
+    .staticNotice b { display: block; margin-bottom: 6px; color: var(--navy); }
+    .downloadCard { display: block; max-width: 420px; margin-top: 24px; padding: 18px; border-radius: 10px; background: var(--navy); color: white; font-weight: 800; text-align: center; }
+    .simpleDirectory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+    .simpleDirectory article { padding: 15px 0; border-top: 1px solid var(--line); }
+    .simpleDirectory b, .simpleDirectory a { display: block; overflow-wrap: anywhere; }
+    .simpleDirectory a { margin-top: 5px; color: #536a71; font-family: Georgia, serif; font-size: 10px; }
+    .courseMeta a { width: 76px; height: 76px; padding: 9px; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; background: var(--navy-soft); color: white; font-size: 8px; font-weight: 800; line-height: 1.25; display: grid; place-items: center; text-align: center; }
+    @media (max-width: 650px) { .simpleDirectory { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="taskbar" aria-label="Course sections">
+      <div class="brandMenu" id="brandMenu">
+        <button class="brand" id="brandButton" type="button" aria-haspopup="menu" aria-expanded="false">
+          <span class="brandMark">7029</span>
+          <span>RNR 7029<small>Building National Centers</small></span>
+          <i aria-hidden="true">⌄</i>
+        </button>
+        <div class="brandDropdown" id="brandDropdown" role="menu">
+          <div><span>COURSE NAVIGATION</span><b>Explore RNR 7029</b></div>
+          <button type="button" data-tab="about"><small>01</small><span>About</span></button>
+          <button type="button" data-tab="syllabus"><small>02</small><span>Syllabus</span></button>
+          <button type="button" data-tab="next-week"><small>03</small><span>Next week</span></button>
+          <button type="button" data-tab="schedule"><small>04</small><span>Schedule</span></button>
+          <button type="button" data-tab="resources"><small>05</small><span>Resources</span></button>
+          <button type="button" data-tab="assignments"><small>06</small><span>Assignments</span></button>
+          <button type="button" data-tab="participants"><small>07</small><span>Participants</span></button>
+          <button type="button" data-tab="contact"><small>08</small><span>Contact</span></button>
+        </div>
+      </div>
+      <div class="taskTabs" role="tablist">
+        <button type="button" class="active" data-tab="about"><small>01</small>About</button>
+        <button type="button" data-tab="syllabus"><small>02</small>Syllabus</button>
+        <button type="button" data-tab="next-week"><small>03</small>Next week</button>
+        <button type="button" data-tab="schedule"><small>04</small>Schedule</button>
+        <button type="button" data-tab="resources"><small>05</small>Resources</button>
+        <button type="button" data-tab="assignments"><small>06</small>Assignments</button>
+        <button type="button" data-tab="participants"><small>07</small>Participants</button>
+        <button type="button" data-tab="contact"><small>08</small>Contact</button>
+      </div>
+    </nav>
+
+    <header class="courseHeader">
+      <figure class="heroVisual"><img src="assets/hero-aquatic-center-v2.webp" alt="Researchers collaborating across a national network of facilities"></figure>
+      <div class="headerCopy">
+        <p class="eyebrow"><span>RNR 7029 · LSU</span> FALL 2026 · 12-WEEK SEMINAR</p>
+        <h1>Building<br><em>National Centers.</em></h1>
+        <p>Follow a bold idea from its first question to an institution built for lasting national impact.</p>
+      </div>
+      <div class="courseMeta">
+        <span>EVERY TUESDAY</span>
+        <strong>11:30 <small>AM</small><br>1:00 <small>PM</small></strong>
+        <p>AGGRC Conference Room<br>2288 Gourrier Avenue</p>
+        <a href="#next-week" data-tab="next-week">View next session →</a>
+      </div>
+    </header>
+
+    <section class="workspace" id="workspace" aria-live="polite">
+      <div class="windowBar">
+        <div class="windowControls" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p><span id="windowNumber">01</span> / <b id="windowLabel">ABOUT</b></p>
+        <span class="windowStatus">COURSE HUB</span>
+      </div>
+
+      <article class="windowPanel aboutPanel staticPanel" id="about-panel" data-panel="about">
+        <div class="panelHeading"><p class="sectionLabel">ABOUT THE SEMINAR</p><h2>Bold ideas can become national institutions.</h2></div>
+        <figure class="sectionPhoto"><img src="assets/section-about-national-centers-v3.webp" alt="University leaders planning a national center around a map of the United States"><figcaption>National impact begins when people align purpose, partnerships, and practical action.</figcaption></figure>
+        <div class="aboutCopy">
+          <p>RNR 7029 takes participants behind the scenes to discover how impactful institutions are envisioned, built, funded, launched, operated, and sustained.</p>
+          <p>Through case studies, guest speakers, and interactive discussion, the class explores the strategy, leadership, governance, partnerships, and collaboration that can turn a visionary idea into lasting national impact.</p>
+          <div class="facts"><span><b>1</b> credit hour</span><span><b>12</b> weeks</span><span><b>90</b> minutes</span><span><b>1</b> bold question</span></div>
+        </div>
+      </article>
+
+      <article class="windowPanel syllabusPanel staticPanel" id="syllabus-panel" data-panel="syllabus" hidden>
+        <div class="syllabusDocument">
+          <div class="syllabusLead">
+            <div><p class="sectionLabel">COURSE SYLLABUS · FALL 2026</p><h2>Building National Centers</h2><p>RNR 7029 · Section 001 · 1 credit hour</p></div>
+            <dl class="syllabusFacts">
+              <div><dt>COURSE DATES</dt><dd>Starts Tuesday, August 25<br><b>Ends Tuesday, November 10, 2026</b></dd></div>
+              <div><dt>WHEN</dt><dd>Tuesdays<br><b>11:30 a.m.–1:00 p.m.</b></dd></div>
+              <div><dt>WHERE</dt><dd>AGGRC Conference Room<br><b>Microsoft Teams option available</b></dd></div>
+              <div><dt>COMMITMENT</dt><dd>1.5 hours in class<br><b>Approximately 3 hours outside class</b></dd></div>
+            </dl>
+          </div>
+          <figure class="sectionPhoto"><img src="assets/section-syllabus.jpg" alt="A fountain pen writing on paper"><figcaption>A clear framework turns an ambitious idea into coordinated work.</figcaption></figure>
+          <section class="coursePurpose"><span>THE CENTRAL QUESTION</span><h3>What does it take to transform a bold idea into a national center capable of reshaping an entire industry?</h3><div><p>This seminar explores how impactful institutions are envisioned, built, funded, launched, operated, and sustained.</p><p>Participants examine strategic planning, organizational design, leadership, governance, fundraising, partnerships, operations, growth, and long-term sustainability.</p></div></section>
+          <section class="learningModel"><div class="learningCopy"><p class="sectionLabel">LEARNING EXPERIENCE</p><h3>From visionary idea to influential institution.</h3><p>Students engage with founders and administrative teams, build a practical framework for institution-building, and contribute through discussion and project work.</p><p>The course emphasizes entrepreneurship, innovation, collaboration, and transformative leadership.</p></div><div class="gradeCards"><article><strong>60%</strong><span>PARTICIPATION</span><p>Attendance, topic identification, discussion leadership, class participation, and assignments.</p></article><article><strong>40%</strong><span>CLASS PROJECTS</span><p>Project development, management, evaluation, and reporting.</p></article></div></section>
+          <section class="syllabusDetails"><div class="syllabusSide"><span>READINGS & TOOLS</span><h3>Materials provided throughout the semester.</h3><p>Appropriate AI and digital tools may be used in accordance with course instructions and LSU academic-integrity expectations.</p><div class="gradeScale"><b>GRADE SCALE</b><p>A: 90–100% · B: 80–&lt;90% · C: 70–&lt;80% · D: 60–&lt;70% · F: below 60%</p><small>LSU plus/minus grading applies.</small></div></div><div class="policyList"><section class="policyItem"><h4>Academic integrity</h4><p>Students are expected to follow the LSU Code of Student Conduct and the LSU Commitment to Community.</p></section><section class="policyItem"><h4>Attendance</h4><p>Notify the instructors at least one week before a known absence and arrange to complete missed work.</p></section><section class="policyItem"><h4>Accessibility</h4><p>Students who need academic adjustments should contact LSU Disability Services and an instructor as early as possible.</p></section><section class="policyItem"><h4>Unexpected changes</h4><p>The course format or requirements may be adjusted with appropriate notice.</p></section></div></section>
+        </div>
+      </article>
+
+      <article class="windowPanel nextPanel staticPanel" id="next-week-panel" data-panel="next-week" hidden>
+        <div class="dateCard"><span>TUE</span><strong>25</strong><p>AUG · 2026</p></div>
+        <div class="agenda"><p class="sectionLabel">SESSION 01 · FOUNDATIONS</p><h2>What makes a national center?</h2><figure class="sectionPhoto compact"><img src="assets/section-next-week-aquatic-v2.webp" alt="A research group exchanging observations in the field"><figcaption>Clear communication connects knowledge across the network.</figcaption></figure><ol><li><time>11:30</time><span><b>Welcome & introductions</b><small>Who is in the room, and what brings us here?</small></span></li><li><time>11:45</time><span><b>Framing conversation</b><small>Centers, networks, institutes, and repositories</small></span></li><li><time>12:15</time><span><b>Mapping exercise</b><small>What must a national center connect?</small></span></li><li><time>12:50</time><span><b>Reflection & next steps</b><small>Questions to carry into week two</small></span></li></ol></div>
+        <aside class="prepare"><p class="sectionLabel">BEFORE CLASS</p><h3>Come ready to introduce one national center.</h3><p>Choose a center in any field. Bring its name, mission, principal audience, and one question about how it works.</p></aside>
+      </article>
+
+      <article class="windowPanel schedulePanel staticPanel" id="schedule-panel" data-panel="schedule" hidden>
+        <div class="panelHeading compact"><p class="sectionLabel">SEMESTER SCHEDULE</p><h2>Coordinate the national network.</h2><p>August 25–November 10<br>Twelve sessions connecting research, communication, leadership, and shared purpose.</p><a class="fullCalendarButton" href="assets/rnr-7029-schedule.ics" download>Add the full schedule to your calendar ↓</a></div>
+        <figure class="sectionPhoto"><img src="assets/section-schedule-aquatic-v2.webp" alt="Researchers coordinating a shared schedule in the field"><figcaption>Shared timing keeps participants and moderators moving together.</figcaption></figure>
+        <div class="sessionList" id="sessionList"></div>
+      </article>
+
+      <article class="windowPanel resourcesPanel staticPanel" id="resources-panel" data-panel="resources" hidden>
+        <div class="panelHeading compact"><p class="sectionLabel">COURSE LIBRARY</p><h2>Shared knowledge, carefully organized.</h2><p>Readings, presentations, and other public course materials will be available here.</p></div>
+        <figure class="sectionPhoto"><img src="assets/section-resources-aquatic-v2.webp" alt="Organized course materials beside a shared data workspace"><figcaption>Accessible readings, tools, and materials support learning across the class.</figcaption></figure>
+        <div class="staticNotice"><b>No course files are available yet.</b>The organizing team will add downloadable materials as they become available.</div>
+      </article>
+
+      <article class="windowPanel assignmentsPanel staticPanel" id="assignments-panel" data-panel="assignments" hidden>
+        <div class="panelHeading compact"><p class="sectionLabel">ACTION ITEMS</p><h2>One clear next step.</h2><p>The current action item stays visible here. Earlier items move into the class history.</p></div>
+        <figure class="sectionPhoto"><img src="assets/section-assignments-aquatic-v2.webp" alt="A researcher recording observations during field work"><figcaption>Each action item moves a larger shared effort forward.</figcaption></figure>
+        <div class="actionLayout"><section class="currentAction"><div class="actionTop"><span>NEXT CLASS</span><i>ACTIVE</i></div><div class="actionEmpty"><span>+</span><h3>Action item to be added</h3><p>Use this space to publish the task students should complete before the next class.</p></div></section><section class="actionHistory"><div class="historyTitle"><div><span>CLASS HISTORY</span><h3>Previous action items</h3></div><b>00</b></div><div class="historyEmpty"><p>No previous action items yet.</p><small>Completed items can be archived here after each class.</small></div></section></div>
+      </article>
+
+      <article class="windowPanel participantsPanel staticPanel" id="participants-panel" data-panel="participants" hidden>
+        <div class="panelHeading compact"><p class="sectionLabel">COURSE COMMUNITY</p><h2>The people building the conversation.</h2><p>Meet the organizing team and participants contributing knowledge, experience, and new ideas.</p></div>
+        <div class="participantsLayout"><section class="teamDirectory"><div class="directoryHeading"><span>ORGANIZING TEAM</span><h3>Course organizers</h3><b>04</b></div><div class="organizerGrid"><article><img src="assets/organizer-yue-liu.webp" alt="Dr. Yue Liu"><div><b>Dr. Yue Liu</b><a href="mailto:yliu@agcenter.lsu.edu">yliu@agcenter.lsu.edu</a><small>225-650-5003</small></div></article><article><img src="assets/organizer-nathalia.webp" alt="Dr. Nathalia Teixeira"><div><b>Dr. Nathalia Teixeira</b><a href="mailto:NTeixeira@agcenter.lsu.edu">NTeixeira@agcenter.lsu.edu</a><small>225-249-9094</small></div></article><article><img src="assets/organizer-jhony.webp" alt="Jhony Benato"><div><b>Jhony Benato</b><a href="mailto:JBenato@agcenter.lsu.edu">JBenato@agcenter.lsu.edu</a><small>225-205-4653</small></div></article><article><img src="assets/organizer-terrence-tiersch.webp" alt="Dr. Terrence Tiersch"><div><b>Dr. Terrence Tiersch</b><a href="mailto:ttiersch@agcenter.lsu.edu">ttiersch@agcenter.lsu.edu</a><small>225-235-7267</small></div></article></div></section><section class="classDirectory"><div class="directoryHeading"><span>COURSE PARTICIPANTS</span><h3>Class participants</h3><b>20</b></div><div class="simpleDirectory" id="participantList"></div></section></div>
+      </article>
+
+      <article class="windowPanel contactPanel staticPanel" id="contact-panel" data-panel="contact" hidden>
+        <div class="panelHeading compact"><p class="sectionLabel">CONTACT</p><h2>Keep the network connected.</h2><p>Contact the organizing team for schedules, assignments, class coordination, or general course information.</p></div>
+        <div class="contactDirectory"><section class="publicContact"><span>COURSE CONTACT</span><h3>Questions about the course?</h3><a href="mailto:nationalcenterexperts@gmail.com">nationalcenterexperts@gmail.com</a><div><span>CLASS LOCATION</span><p>AGGRC Conference Room<br>2288 Gourrier Avenue<br>Baton Rouge, LA 70820</p></div></section><section class="contactOrganizers"><div class="directoryHeading"><span>ORGANIZING TEAM</span><h3>Direct contacts</h3><b>04</b></div><div class="contactOrganizerGrid"><article><img src="assets/organizer-yue-liu.webp" alt="Dr. Yue Liu"><div><b>Dr. Yue Liu</b><a href="mailto:yliu@agcenter.lsu.edu">yliu@agcenter.lsu.edu</a><small>225-650-5003</small></div></article><article><img src="assets/organizer-nathalia.webp" alt="Dr. Nathalia Teixeira"><div><b>Dr. Nathalia Teixeira</b><a href="mailto:NTeixeira@agcenter.lsu.edu">NTeixeira@agcenter.lsu.edu</a><small>225-249-9094</small></div></article><article><img src="assets/organizer-jhony.webp" alt="Jhony Benato"><div><b>Jhony Benato</b><a href="mailto:JBenato@agcenter.lsu.edu">JBenato@agcenter.lsu.edu</a><small>225-205-4653</small></div></article><article><img src="assets/organizer-terrence-tiersch.webp" alt="Dr. Terrence Tiersch"><div><b>Dr. Terrence Tiersch</b><a href="mailto:ttiersch@agcenter.lsu.edu">ttiersch@agcenter.lsu.edu</a><small>225-235-7267</small></div></article></div></section></div>
+      </article>
+    </section>
+
+    <footer><p>RNR 7029 · Building National Centers · Louisiana State University · Fall 2026</p><a href="mailto:nationalcenterexperts@gmail.com">nationalcenterexperts@gmail.com ↗</a></footer>
+  </main>
+
+  <script>
+    const tabs = ["about","syllabus","next-week","schedule","resources","assignments","participants","contact"];
+    const labels = {about:"ABOUT",syllabus:"SYLLABUS","next-week":"NEXT WEEK",schedule:"SCHEDULE",resources:"RESOURCES",assignments:"ASSIGNMENTS",participants:"PARTICIPANTS",contact:"CONTACT"};
+    function openTab(id, scroll = true) {
+      if (!tabs.includes(id)) id = "about";
+      document.querySelectorAll("[data-panel]").forEach(panel => { panel.hidden = panel.dataset.panel !== id; });
+      document.querySelectorAll(".taskTabs [data-tab]").forEach(button => button.classList.toggle("active", button.dataset.tab === id));
+      document.getElementById("windowNumber").textContent = String(tabs.indexOf(id) + 1).padStart(2,"0");
+      document.getElementById("windowLabel").textContent = labels[id];
+      document.getElementById("brandDropdown").classList.remove("open");
+      document.getElementById("brandButton").setAttribute("aria-expanded","false");
+      history.replaceState(null,"","#" + id);
+      if (scroll) document.getElementById("workspace").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+    document.querySelectorAll("[data-tab]").forEach(button => button.addEventListener("click", event => { event.preventDefault(); openTab(button.dataset.tab); }));
+    document.getElementById("brandButton").addEventListener("click", () => { const menu = document.getElementById("brandDropdown"); const open = menu.classList.toggle("open"); document.getElementById("brandButton").setAttribute("aria-expanded",String(open)); });
+
+    const sessions = ["Aug 25","Sep 01","Sep 08","Sep 15","Sep 22","Sep 29","Oct 06","Oct 13","Oct 20","Oct 27","Nov 03","Nov 10"];
+    document.getElementById("sessionList").innerHTML = sessions.map((date,index) => `<div class="session"><span>${String(index+1).padStart(2,"0")}</span><time>${date.toUpperCase()}</time><div><h3>Week ${index+1}</h3><small>Topic to be announced</small></div><span class="sessionModerator"><small>MODERATOR</small><b>To be announced</b></span><time class="sessionTime">11:30–13:00</time></div>`).join("");
+
+    const participants = [
+      ["Phi H. Hoang","PHoang@agcenter.lsu.edu"],["Sydney Barker","SBarker@agcenter.lsu.edu"],["Deborah Obadofin","dobado1@lsu.edu"],["Nate Semmes","nate.semmes@gmail.com"],["Jack Koch","JKoch@agcenter.lsu.edu"],["Irene Marti Gil","IMartiGil@agcenter.lsu.edu"],["Christopher K. Toepfer","CToepfer@agcenter.lsu.edu"],["Owen Plaisance","OPlaisance@agcenter.lsu.edu"],["Nicholas Conrad Coxe","NCoxe@agcenter.lsu.edu"],["Elise R. Harmon","EHarmon@agcenter.lsu.edu"],["Thaiza Rodrigues de Freitas","TRodriguesdeFreitas@agcenter.lsu.edu"],["Mohsen Norouzi","mnorou2@lsu.edu"],["Seyedmajid Hosseini","shoss11@lsu.edu"],["Victoria E. Denham","VDenham@agcenter.lsu.edu"],["Johnnie Kelley","JKelley@agcenter.lsu.edu"],["Catherine Norris","CNorris@agcenter.lsu.edu"],["Calley Chauvin","CChauvin@agcenter.lsu.edu"],["Pushpita Nag","PNag@agcenter.lsu.edu"],["Gabrielle Bush","GBush@agcenter.lsu.edu"],["Lillian Bodi","LBodi@agcenter.lsu.edu"]
+    ];
+    document.getElementById("participantList").innerHTML = participants.map(([name,email]) => `<article><b>${name}</b><a href="mailto:${email}">${email}</a></article>`).join("");
+    openTab(location.hash.slice(1), false);
+  </script>
+</body>
+</html>
