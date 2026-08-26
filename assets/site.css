@@ -312,6 +312,8 @@ a { text-decoration: none; }
 .fileList > a small { color: #9fb0b6; font-size: 8px; }
 .fileList > a i { font-size: 8px; font-style: normal; letter-spacing: .12em; }
 .fileList > a:hover b { color: var(--gold); }
+.resourceWorkspace.publicLibrary { grid-template-columns: 1fr; }
+.publicLibrary .downloadLibrary { min-height: 0; border-right: 0; }
 .organizerUpload { background: var(--paper); color: var(--ink); }
 .organizerUpload > p { margin: 28px 0; font-size: 12px; line-height: 1.6; }
 .googleSignIn, .organizerUpload button { display: block; width: 100%; padding: 14px; border: 0; border-radius: 9px; background: var(--navy-soft); color: white; text-align: center; font-size: 10px; font-weight: 800; }
@@ -329,6 +331,7 @@ a { text-decoration: none; }
 .actionTop i { padding: 6px 10px; border: 1px solid var(--ink); border-radius: 20px; font-style: normal; }
 .actionEmpty { height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .actionEmpty > span { border-color: var(--ink); color: var(--ink); }
+.actionEmpty > small { margin-top: 18px; color: #607178; font-size: 8px; font-weight: 800; letter-spacing: .14em; }
 .actionEmpty h3 { margin: 22px 0 8px; font-family: Georgia, serif; font-size: 29px; font-weight: 400; }
 .actionEmpty p { max-width: 390px; font-size: 11px; line-height: 1.55; }
 .historyEmpty { height: 245px; border-top: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; justify-content: center; }

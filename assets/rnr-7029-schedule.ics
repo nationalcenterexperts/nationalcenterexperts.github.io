@@ -5,13 +5,31 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:RNR 7029 - Building National Centers
 BEGIN:VEVENT
-UID:rnr7029-20260825@nationalcenterexperts
-DTSTAMP:20260824T120000Z
+UID:rnr7029-20260825-01@nationalcenterexperts
+DTSTAMP:20260826T120000Z
 DTSTART;TZID=America/Chicago:20260825T113000
 DTEND;TZID=America/Chicago:20260825T130000
-RRULE:FREQ=WEEKLY;COUNT=12;BYDAY=TU
-SUMMARY:RNR 7029 - Building National Centers
+SUMMARY:RNR 7029 - Introductions & Greetings
 LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
-DESCRIPTION:Weekly RNR 7029 seminar.
+DESCRIPTION:Course welcome\, introductions\, and shared expectations. Moderators: Dr. Yue Liu\, Jhony Benato\, and Dr. Nathalia Teixeira.
+END:VEVENT
+BEGIN:VEVENT
+UID:rnr7029-20260901-02@nationalcenterexperts
+DTSTAMP:20260826T120000Z
+DTSTART;TZID=America/Chicago:20260901T113000
+DTEND;TZID=America/Chicago:20260901T130000
+SUMMARY:RNR 7029 - Core Components of Institutions
+LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
+DESCRIPTION:Basic components of a national center and what it should include. Moderators: Dr. Yue Liu\, Jhony Benato\, and Dr. Nathalia Teixeira.
+END:VEVENT
+BEGIN:VEVENT
+UID:rnr7029-20260908-weekly@nationalcenterexperts
+DTSTAMP:20260826T120000Z
+DTSTART;TZID=America/Chicago:20260908T113000
+DTEND;TZID=America/Chicago:20260908T130000
+RRULE:FREQ=WEEKLY;COUNT=10;BYDAY=TU
+SUMMARY:RNR 7029 - Weekly Session
+LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
+DESCRIPTION:Weekly RNR 7029 seminar. Topic and moderator to be announced.
 END:VEVENT
 END:VCALENDAR

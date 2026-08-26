@@ -121,9 +121,9 @@
       </article>
 
       <article class="windowPanel nextPanel staticPanel" id="next-week-panel" data-panel="next-week" hidden>
-        <div class="dateCard"><span>TUE</span><strong>25</strong><p>AUG · 2026</p></div>
-        <div class="agenda"><p class="sectionLabel">SESSION 01 · FOUNDATIONS</p><h2>What makes a national center?</h2><figure class="sectionPhoto compact"><img src="assets/section-next-week-aquatic-v2.webp" alt="A research group exchanging observations in the field"><figcaption>Clear communication connects knowledge across the network.</figcaption></figure><ol><li><time>11:30</time><span><b>Welcome & introductions</b><small>Who is in the room, and what brings us here?</small></span></li><li><time>11:45</time><span><b>Framing conversation</b><small>Centers, networks, institutes, and repositories</small></span></li><li><time>12:15</time><span><b>Mapping exercise</b><small>What must a national center connect?</small></span></li><li><time>12:50</time><span><b>Reflection & next steps</b><small>Questions to carry into week two</small></span></li></ol></div>
-        <aside class="prepare"><p class="sectionLabel">BEFORE CLASS</p><h3>Come ready to introduce one national center.</h3><p>Choose a center in any field. Bring its name, mission, principal audience, and one question about how it works.</p></aside>
+        <div class="dateCard"><span>TUE</span><strong>01</strong><p>SEP · 2026</p></div>
+        <div class="agenda"><p class="sectionLabel">SESSION 02 · CORE COMPONENTS</p><h2>What does a national center need?</h2><figure class="sectionPhoto compact"><img src="assets/section-next-week-aquatic-v2.webp" alt="A research group exchanging observations in the field"><figcaption>Strong national centers align people, purpose, structure, and resources.</figcaption></figure><ol><li><time>11:30</time><span><b>Check-in & reflections</b><small>Insights and questions from our first meeting</small></span></li><li><time>11:45</time><span><b>Defining the essentials</b><small>What must be present for a national center to exist?</small></span></li><li><time>12:15</time><span><b>Institutional components</b><small>Purpose, people, governance, resources, and operations</small></span></li><li><time>12:45</time><span><b>Discussion & next steps</b><small>What should every national center include?</small></span></li></ol></div>
+        <aside class="prepare"><p class="sectionLabel">BEFORE CLASS · DUE SEPTEMBER 1</p><h3>Imagine an institution worth building.</h3><p>Think of a center, institution, or organization you would like to build. Come prepared to discuss what would be necessary for it to exist.</p></aside>
       </article>
 
       <article class="windowPanel schedulePanel staticPanel" id="schedule-panel" data-panel="schedule" hidden>
@@ -135,13 +135,13 @@
       <article class="windowPanel resourcesPanel staticPanel" id="resources-panel" data-panel="resources" hidden>
         <div class="panelHeading compact"><p class="sectionLabel">COURSE LIBRARY</p><h2>Shared knowledge, carefully organized.</h2><p>Readings, presentations, and other public course materials will be available here.</p></div>
         <figure class="sectionPhoto"><img src="assets/section-resources-aquatic-v2.webp" alt="Organized course materials beside a shared data workspace"><figcaption>Accessible readings, tools, and materials support learning across the class.</figcaption></figure>
-        <div class="staticNotice"><b>No course files are available yet.</b>The organizing team will add downloadable materials as they become available.</div>
+        <div class="resourceWorkspace publicLibrary"><section class="downloadLibrary"><div class="resourceTitle"><div><span>AVAILABLE FILES</span><h3>Course downloads</h3></div><b>02</b></div><div class="fileList"><a href="assets/rnr-7029-syllabus-fall-2026.docx" download><span>W</span><div><b>Course Syllabus</b><small>RNR 7029 · FALL 2026</small></div><i>DOWNLOAD ↓</i></a><a href="assets/rnr-7029-agenda-august-25.docx" download><span>W</span><div><b>Session 01 Agenda</b><small>AUGUST 25, 2026 · INTRODUCTIONS & GREETINGS</small></div><i>DOWNLOAD ↓</i></a></div></section></div>
       </article>
 
       <article class="windowPanel assignmentsPanel staticPanel" id="assignments-panel" data-panel="assignments" hidden>
         <div class="panelHeading compact"><p class="sectionLabel">ACTION ITEMS</p><h2>One clear next step.</h2><p>The current action item stays visible here. Earlier items move into the class history.</p></div>
         <figure class="sectionPhoto"><img src="assets/section-assignments-aquatic-v2.webp" alt="A researcher recording observations during field work"><figcaption>Each action item moves a larger shared effort forward.</figcaption></figure>
-        <div class="actionLayout"><section class="currentAction"><div class="actionTop"><span>NEXT CLASS</span><i>ACTIVE</i></div><div class="actionEmpty"><span>+</span><h3>Action item to be added</h3><p>Use this space to publish the task students should complete before the next class.</p></div></section><section class="actionHistory"><div class="historyTitle"><div><span>CLASS HISTORY</span><h3>Previous action items</h3></div><b>00</b></div><div class="historyEmpty"><p>No previous action items yet.</p><small>Completed items can be archived here after each class.</small></div></section></div>
+        <div class="actionLayout"><section class="currentAction"><div class="actionTop"><span>NEXT CLASS</span><i>ACTIVE</i></div><div class="actionEmpty"><span>01</span><small>DUE SEPTEMBER 1, 2026</small><h3>Imagine an institution worth building.</h3><p>Think of a center, institution, or organization you would like to build. Come prepared to discuss what would be necessary for it to exist.</p></div></section><section class="actionHistory"><div class="historyTitle"><div><span>CLASS HISTORY</span><h3>Previous action items</h3></div><b>00</b></div><div class="historyEmpty"><p>No previous action items yet.</p><small>Completed items can be archived here after each class.</small></div></section></div>
       </article>
 
       <article class="windowPanel participantsPanel staticPanel" id="participants-panel" data-panel="participants" hidden>
@@ -180,8 +180,21 @@
     document.addEventListener("click", event => { if (!document.getElementById("brandMenu").contains(event.target)) { document.getElementById("brandDropdown").classList.remove("open"); document.getElementById("brandButton").setAttribute("aria-expanded","false"); } if (!document.getElementById("adminMenu").contains(event.target)) { document.getElementById("adminDropdown").classList.remove("open"); document.getElementById("adminButton").setAttribute("aria-expanded","false"); } });
     document.addEventListener("keydown", event => { if (event.key === "Escape") { document.getElementById("brandDropdown").classList.remove("open"); document.getElementById("adminDropdown").classList.remove("open"); document.getElementById("brandButton").setAttribute("aria-expanded","false"); document.getElementById("adminButton").setAttribute("aria-expanded","false"); } });
 
-    const sessions = ["Aug 25","Sep 01","Sep 08","Sep 15","Sep 22","Sep 29","Oct 06","Oct 13","Oct 20","Oct 27","Nov 03","Nov 10"];
-    document.getElementById("sessionList").innerHTML = sessions.map((date,index) => `<div class="session"><span>${String(index+1).padStart(2,"0")}</span><time>${date.toUpperCase()}</time><div><h3>Week ${index+1}</h3><small>Topic to be announced</small></div><span class="sessionModerator"><small>MODERATOR</small><b>To be announced</b></span><time class="sessionTime">11:30–13:00</time></div>`).join("");
+    const sessions = [
+      {date:"Aug 25",title:"Introductions & Greetings",description:"Course welcome, introductions, and shared expectations",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
+      {date:"Sep 01",title:"Core Components of Institutions",description:"Basic components of a national center and what it should include",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
+      {date:"Sep 08",title:"Week 3",description:"Topic to be announced",moderator:"To be announced"},
+      {date:"Sep 15",title:"Week 4",description:"Topic to be announced",moderator:"To be announced"},
+      {date:"Sep 22",title:"Week 5",description:"Topic to be announced",moderator:"To be announced"},
+      {date:"Sep 29",title:"Week 6",description:"Topic to be announced",moderator:"To be announced"},
+      {date:"Oct 06",title:"Week 7",description:"Topic to be announced",moderator:"To be announced"},
+      {date:"Oct 13",title:"Week 8",description:"Topic to be announced",moderator:"To be announced"},
+      {date:"Oct 20",title:"Week 9",description:"Topic to be announced",moderator:"To be announced"},
+      {date:"Oct 27",title:"Week 10",description:"Topic to be announced",moderator:"To be announced"},
+      {date:"Nov 03",title:"Week 11",description:"Topic to be announced",moderator:"To be announced"},
+      {date:"Nov 10",title:"Week 12",description:"Topic to be announced",moderator:"To be announced"}
+    ];
+    document.getElementById("sessionList").innerHTML = sessions.map((session,index) => `<div class="session"><span>${String(index+1).padStart(2,"0")}</span><time>${session.date.toUpperCase()}</time><div><h3>${session.title}</h3><small>${session.description}</small></div><span class="sessionModerator"><small>MODERATOR</small><b>${session.moderator}</b></span><time class="sessionTime">11:30–13:00</time></div>`).join("");
 
     const participants = [
       "Phi H. Hoang","Sydney Barker","Deborah Obadofin","Nate Semmes","Jack Koch","Irene Marti Gil","Christopher K. Toepfer","Owen Plaisance","Nicholas Conrad Coxe","Elise R. Harmon","Thaiza Rodrigues de Freitas","Mohsen Norouzi","Seyedmajid Hosseini","Victoria E. Denham","Johnnie Kelley","Catherine Norris","Calley Chauvin","Pushpita Nag","Gabrielle Bush","Lillian Bodi"
