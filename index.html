@@ -55,6 +55,19 @@
         <button type="button" data-tab="participants"><small>07</small>Participants</button>
         <button type="button" data-tab="contact"><small>08</small>Contact</button>
       </div>
+      <div class="adminMenu" id="adminMenu">
+        <button class="adminToggle" id="adminButton" type="button" aria-haspopup="menu" aria-expanded="false">
+          <span class="adminBadge" aria-hidden="true">A</span>
+          <span>Admin<small>GitHub access</small></span>
+        </button>
+        <div class="adminDropdown" id="adminDropdown" role="menu">
+          <div><span>ORGANIZER ACCESS</span><b>Manage the course</b><p>GitHub will request an authorized account before allowing changes.</p></div>
+          <a href="https://github.com/nationalcenterexperts/nationalcenterexperts.github.io/edit/main/index.html" target="_blank" rel="noopener" role="menuitem"><small>01</small><span><b>Edit course content</b><em>Dates, topics, agenda, and text</em></span></a>
+          <a href="https://github.com/nationalcenterexperts/nationalcenterexperts.github.io/upload/main/assets" target="_blank" rel="noopener" role="menuitem"><small>02</small><span><b>Upload course files</b><em>Add weekly materials to Assets</em></span></a>
+          <a href="https://github.com/nationalcenterexperts/nationalcenterexperts.github.io" target="_blank" rel="noopener" role="menuitem"><small>03</small><span><b>Open repository</b><em>Review files and publication history</em></span></a>
+          <p class="adminHint">Changes become public after they are committed to the main branch.</p>
+        </div>
+      </div>
     </nav>
 
     <header class="courseHeader">
@@ -156,11 +169,16 @@
       document.getElementById("windowLabel").textContent = labels[id];
       document.getElementById("brandDropdown").classList.remove("open");
       document.getElementById("brandButton").setAttribute("aria-expanded","false");
+      document.getElementById("adminDropdown").classList.remove("open");
+      document.getElementById("adminButton").setAttribute("aria-expanded","false");
       history.replaceState(null,"","#" + id);
       if (scroll) document.getElementById("workspace").scrollIntoView({behavior:"smooth",block:"start"});
     }
     document.querySelectorAll("[data-tab]").forEach(button => button.addEventListener("click", event => { event.preventDefault(); openTab(button.dataset.tab); }));
-    document.getElementById("brandButton").addEventListener("click", () => { const menu = document.getElementById("brandDropdown"); const open = menu.classList.toggle("open"); document.getElementById("brandButton").setAttribute("aria-expanded",String(open)); });
+    document.getElementById("brandButton").addEventListener("click", () => { const menu = document.getElementById("brandDropdown"); const open = menu.classList.toggle("open"); document.getElementById("brandButton").setAttribute("aria-expanded",String(open)); document.getElementById("adminDropdown").classList.remove("open"); document.getElementById("adminButton").setAttribute("aria-expanded","false"); });
+    document.getElementById("adminButton").addEventListener("click", () => { const menu = document.getElementById("adminDropdown"); const open = menu.classList.toggle("open"); document.getElementById("adminButton").setAttribute("aria-expanded",String(open)); document.getElementById("brandDropdown").classList.remove("open"); document.getElementById("brandButton").setAttribute("aria-expanded","false"); });
+    document.addEventListener("click", event => { if (!document.getElementById("brandMenu").contains(event.target)) { document.getElementById("brandDropdown").classList.remove("open"); document.getElementById("brandButton").setAttribute("aria-expanded","false"); } if (!document.getElementById("adminMenu").contains(event.target)) { document.getElementById("adminDropdown").classList.remove("open"); document.getElementById("adminButton").setAttribute("aria-expanded","false"); } });
+    document.addEventListener("keydown", event => { if (event.key === "Escape") { document.getElementById("brandDropdown").classList.remove("open"); document.getElementById("adminDropdown").classList.remove("open"); document.getElementById("brandButton").setAttribute("aria-expanded","false"); document.getElementById("adminButton").setAttribute("aria-expanded","false"); } });
 
     const sessions = ["Aug 25","Sep 01","Sep 08","Sep 15","Sep 22","Sep 29","Oct 06","Oct 13","Oct 20","Oct 27","Nov 03","Nov 10"];
     document.getElementById("sessionList").innerHTML = sessions.map((date,index) => `<div class="session"><span>${String(index+1).padStart(2,"0")}</span><time>${date.toUpperCase()}</time><div><h3>Week ${index+1}</h3><small>Topic to be announced</small></div><span class="sessionModerator"><small>MODERATOR</small><b>To be announced</b></span><time class="sessionTime">11:30–13:00</time></div>`).join("");

@@ -7,6 +7,10 @@ external hosting service is required.
 
 ## Updating the site through GitHub
 
+The **Admin** menu on the published website links directly to the authorized
+GitHub editing and file-upload pages. GitHub account permissions protect those
+operations; visitors can open the links but cannot save changes.
+
 1. Open `index.html` in the public repository and click the pencil icon.
 2. Use the browser search to find the current text, then replace it.
 3. Click **Commit changes**. GitHub Pages republishes the site automatically.

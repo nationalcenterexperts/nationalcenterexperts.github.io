@@ -102,6 +102,25 @@ a { text-decoration: none; }
 .brandDropdown > button small { color: #83a2a6; font-size: 7px; letter-spacing: .12em; }
 .brandDropdown > button:hover, .brandDropdown > button:focus-visible { border-radius: 7px; background: #e7f1ee; color: var(--navy); outline: none; }
 
+.adminMenu { width: 132px; flex: 0 0 132px; position: relative; border-left: 1px solid var(--line); }
+.adminToggle { width: 100%; height: 100%; padding: 0 15px; border: 0; background: transparent; display: flex; align-items: center; gap: 10px; color: var(--navy); text-align: left; font-size: 10px; font-weight: 800; letter-spacing: .06em; transition: background .2s ease; }
+.adminToggle:hover, .adminToggle:focus-visible { background: #e7f1ee; outline: none; }
+.adminToggle > span:last-child { line-height: 1; }
+.adminToggle small { display: block; margin-top: 6px; color: #718187; font-size: 7px; letter-spacing: .1em; white-space: nowrap; }
+.adminBadge { width: 30px; height: 30px; flex: 0 0 30px; border: 1px solid rgba(23, 63, 74, .25); border-radius: 50%; display: grid; place-items: center; color: var(--coral); font-size: 9px; }
+.adminDropdown { position: absolute; top: calc(100% + 1px); right: 12px; width: 310px; padding: 12px; border: 1px solid var(--line); border-radius: 0 0 14px 14px; background: rgba(255, 254, 250, .99); box-shadow: 0 22px 45px rgba(20, 54, 62, .16); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .18s ease, transform .18s ease, visibility .18s ease; }
+.adminDropdown.open { opacity: 1; visibility: visible; transform: translateY(0); }
+.adminDropdown > div { padding: 10px 10px 14px; border-bottom: 1px solid var(--line); }
+.adminDropdown > div > span { display: block; color: var(--coral); font-size: 7px; font-weight: 800; letter-spacing: .16em; }
+.adminDropdown > div > b { display: block; margin-top: 6px; color: var(--navy); font-family: Georgia, serif; font-size: 18px; font-weight: 400; }
+.adminDropdown > div > p { margin-top: 8px; color: #64767b; font-size: 9px; line-height: 1.45; }
+.adminDropdown > a { padding: 12px 10px; border-bottom: 1px solid rgba(23,63,74,.08); display: grid; grid-template-columns: 28px 1fr; gap: 4px; align-items: start; color: #456169; }
+.adminDropdown > a:hover, .adminDropdown > a:focus-visible { border-radius: 7px; background: #e7f1ee; color: var(--navy); outline: none; }
+.adminDropdown > a > small { padding-top: 2px; color: #83a2a6; font-size: 7px; letter-spacing: .12em; }
+.adminDropdown > a b { display: block; font-size: 10px; }
+.adminDropdown > a em { display: block; margin-top: 4px; color: #718187; font-size: 8px; font-style: normal; line-height: 1.35; }
+.adminHint { margin: 11px 10px 3px; color: #718187; font-size: 8px; line-height: 1.45; }
+
 .courseHeader {
   min-height: 720px;
   padding: 76px 5vw 170px;
@@ -619,6 +638,10 @@ footer a { color: var(--navy); font-weight: 800; border-bottom: 1px solid var(--
   .brandMark { width: 38px; height: 38px; }
   .brandDropdown { left: 8px; width: min(270px, calc(100vw - 16px)); }
   .taskTabs button { min-width: 87px; padding: 0 10px; font-size: 9px; }
+  .adminMenu { width: 58px; flex-basis: 58px; }
+  .adminToggle { justify-content: center; padding: 0 10px; }
+  .adminToggle > span:last-child { display: none; }
+  .adminDropdown { right: 8px; width: min(310px, calc(100vw - 16px)); }
   .courseMeta { padding: 17px; gap: 12px; grid-template-columns: 70px 1fr 1.3fr; }
   .courseMeta strong { padding-left: 12px; font-size: 21px; }
   .workspace { width: calc(100% - 20px); margin: 20px auto; border-radius: 14px; scroll-margin-top: 82px; }
