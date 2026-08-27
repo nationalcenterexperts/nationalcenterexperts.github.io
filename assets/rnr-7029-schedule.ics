@@ -4,32 +4,46 @@ PRODID:-//RNR 7029//Building National Centers//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:RNR 7029 - Building National Centers
+X-WR-TIMEZONE:America/Chicago
 BEGIN:VEVENT
 UID:rnr7029-20260825-01@nationalcenterexperts
-DTSTAMP:20260826T120000Z
+DTSTAMP:20260827T120000Z
 DTSTART;TZID=America/Chicago:20260825T113000
 DTEND;TZID=America/Chicago:20260825T130000
 SUMMARY:RNR 7029 - Introductions & Greetings
 LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
-DESCRIPTION:Course welcome\, introductions\, and shared expectations. Moderators: Dr. Yue Liu\, Jhony Benato\, and Dr. Nathalia Teixeira.
+URL:https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
+DESCRIPTION:Course welcome\, introductions\, and shared expectations. Moderators: Dr. Yue Liu\, Jhony Benato\, and Dr. Nathalia Teixeira. Microsoft Teams: https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
 END:VEVENT
 BEGIN:VEVENT
 UID:rnr7029-20260901-02@nationalcenterexperts
-DTSTAMP:20260826T120000Z
+DTSTAMP:20260827T120000Z
 DTSTART;TZID=America/Chicago:20260901T113000
 DTEND;TZID=America/Chicago:20260901T130000
 SUMMARY:RNR 7029 - Core Components of Institutions
 LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
-DESCRIPTION:Basic components of a national center and what it should include. Moderators: Dr. Yue Liu\, Jhony Benato\, and Dr. Nathalia Teixeira.
+URL:https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
+DESCRIPTION:Basic components of a national center and what it should include. Moderators: Dr. Yue Liu\, Jhony Benato\, and Dr. Nathalia Teixeira. Microsoft Teams: https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
 END:VEVENT
 BEGIN:VEVENT
-UID:rnr7029-20260908-weekly@nationalcenterexperts
-DTSTAMP:20260826T120000Z
+UID:rnr7029-20260908-03@nationalcenterexperts
+DTSTAMP:20260827T120000Z
 DTSTART;TZID=America/Chicago:20260908T113000
 DTEND;TZID=America/Chicago:20260908T130000
-RRULE:FREQ=WEEKLY;COUNT=10;BYDAY=TU
+SUMMARY:RNR 7029 - Case Studies
+LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
+URL:https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
+DESCRIPTION:Learning from institutions and national-center models. Microsoft Teams: https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
+END:VEVENT
+BEGIN:VEVENT
+UID:rnr7029-20260915-weekly@nationalcenterexperts
+DTSTAMP:20260827T120000Z
+DTSTART;TZID=America/Chicago:20260915T113000
+DTEND;TZID=America/Chicago:20260915T130000
+RRULE:FREQ=WEEKLY;COUNT=13;BYDAY=TU
 SUMMARY:RNR 7029 - Weekly Session
 LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
-DESCRIPTION:Weekly RNR 7029 seminar. Topic and moderator to be announced.
+URL:https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
+DESCRIPTION:Weekly RNR 7029 seminar. Topic\, project milestone\, and moderator to be announced. Microsoft Teams: https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
 END:VEVENT
 END:VCALENDAR

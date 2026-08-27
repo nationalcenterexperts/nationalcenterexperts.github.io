@@ -26,7 +26,9 @@ inside the Resources section of `index.html`.
 
 - All public course sections and navigation
 - Course images and organizer photographs
-- Schedule, participant names, and organizer contact information
+- Sixteen-session schedule, weekly history, participant names, and organizer contact information
+- Project-milestone and moderator fields for every scheduled session
+- Microsoft Teams access in the web syllabus and downloadable calendar
 - Downloadable full-course calendar file
 - Responsive desktop and mobile styling
 
