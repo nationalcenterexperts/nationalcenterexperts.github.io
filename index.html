@@ -126,10 +126,14 @@
       </article>
 
       <article class="windowPanel nextPanel staticPanel" id="next-week-panel" data-panel="next-week" hidden>
+        <div class="weekToolbar">
+          <div><span id="weekContext">UPCOMING SESSION</span><p id="weekContextText">You are viewing the next class meeting.</p></div>
+          <button id="returnNextSession" type="button" data-tab="next-week" hidden>Return to the next session →</button>
+        </div>
         <div class="weekDetail">
           <div class="dateCard"><span id="weekDay">TUE</span><strong id="weekDate">01</strong><p id="weekMonth">SEP · 2026</p></div>
           <div class="agenda"><p class="sectionLabel" id="weekLabel">SESSION 02 · CORE COMPONENTS</p><h2 id="weekTitle">What does a national center need?</h2><figure class="sectionPhoto compact"><img src="assets/section-next-week-aquatic-v2.webp" alt="A research group exchanging observations in the field"><figcaption id="weekCaption">Strong national centers align people, purpose, structure, and resources.</figcaption></figure><ol id="weekAgenda"></ol></div>
-          <aside class="prepare"><p class="sectionLabel" id="assignmentLabel">ACTION ITEM · DUE SEPTEMBER 1</p><h3 id="assignmentTitle">Imagine an institution worth building.</h3><p id="assignmentText">Think of a center, institution, or organization you would like to build. Come prepared to discuss what would be necessary for it to exist.</p></aside>
+          <aside class="prepare" id="assignmentCard"><span class="assignmentBadge" id="assignmentBadge">ACTIVE FOR THE NEXT SESSION</span><p class="sectionLabel" id="assignmentLabel">ACTION ITEM · DUE SEPTEMBER 1</p><h3 id="assignmentTitle">Imagine an institution worth building.</h3><p id="assignmentText">Think of a center, institution, or organization you would like to build. Come prepared to discuss what would be necessary for it to exist.</p></aside>
         </div>
         <section class="weekHistory"><div class="historyHeading"><p class="sectionLabel">PAST WEEKS</p><h2>Follow the conversation as it grows.</h2><p>Open a completed session to revisit its topic, discussion, and action item.</p></div><div class="pastWeekList" id="pastWeekList"></div></section>
       </article>
@@ -148,7 +152,7 @@
 
       <article class="windowPanel participantsPanel staticPanel" id="participants-panel" data-panel="participants" hidden>
         <div class="panelHeading compact"><p class="sectionLabel">COURSE COMMUNITY</p><h2>The people building the conversation.</h2><p>Meet the organizing team and participants contributing knowledge, experience, and new ideas.</p></div>
-        <div class="participantsLayout"><section class="teamDirectory"><div class="directoryHeading"><span>ORGANIZING TEAM</span><h3>Course organizers</h3><b>04</b></div><div class="organizerGrid"><article><img src="assets/organizer-yue-liu.webp" alt="Dr. Yue Liu"><div><b>Dr. Yue Liu</b><a href="mailto:yliu@agcenter.lsu.edu">yliu@agcenter.lsu.edu</a><small>225-650-5003</small></div></article><article><img src="assets/organizer-nathalia.webp" alt="Dr. Nathalia Teixeira"><div><b>Dr. Nathalia Teixeira</b><a href="mailto:NTeixeira@agcenter.lsu.edu">NTeixeira@agcenter.lsu.edu</a><small>225-249-9094</small></div></article><article><img src="assets/organizer-jhony.webp" alt="Jhony Benato"><div><b>Jhony Benato</b><a href="mailto:JBenato@agcenter.lsu.edu">JBenato@agcenter.lsu.edu</a><small>225-205-4653</small></div></article><article><img src="assets/organizer-terrence-tiersch.webp" alt="Dr. Terrence Tiersch"><div><b>Dr. Terrence Tiersch</b><a href="mailto:ttiersch@agcenter.lsu.edu">ttiersch@agcenter.lsu.edu</a><small>225-235-7267</small></div></article></div></section><section class="classDirectory"><div class="directoryHeading"><span>COURSE PARTICIPANTS</span><h3>Class participants</h3><b>20</b></div><div class="simpleDirectory" id="participantList"></div></section></div>
+        <div class="participantsLayout participantsOnly"><section class="classDirectory"><div class="directoryHeading"><span>COURSE PARTICIPANTS</span><h3>Class participants</h3><b>24</b></div><p class="participantPrivacy">Names are listed for class community reference. Organizer photographs and contact details are available only in Contact.</p><div class="simpleDirectory" id="participantList"></div></section></div>
       </article>
 
       <article class="windowPanel contactPanel staticPanel" id="contact-panel" data-panel="contact" hidden>
@@ -164,12 +168,12 @@
     const tabs = ["home","about","participants","contact","syllabus","next-week","schedule","resources"];
     const labels = {home:"HOME",about:"ABOUT US",participants:"PARTICIPANTS",contact:"CONTACT",syllabus:"SYLLABUS","next-week":"NEXT WEEK",schedule:"SCHEDULE",resources:"RESOURCES"};
     const sessions = [
-      {iso:"2026-08-25",date:"Aug 25",title:"Introductions & Greetings",detailTitle:"Welcome to Building National Centers",description:"Course welcome, introductions, and shared expectations",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira",caption:"A shared purpose begins with introductions, expectations, and the questions the group wants to pursue.",agenda:[["11:30","Welcome & introductions","Meet the organizing team and course participants"],["12:00","Course overview","Goals, structure, expectations, and the semester project"],["12:30","Opening conversation","Why national centers matter and what participants hope to build"]],assignment:{label:"OPENING SESSION",title:"Begin with a bold question.",text:"No advance action item was required for the opening session."}},
-      {iso:"2026-09-01",date:"Sep 01",title:"Core Components of Institutions",detailTitle:"What does a national center need?",description:"Basic components of a national center and what it should include",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira",caption:"Strong national centers align people, purpose, structure, and resources.",agenda:[["11:30","Check-in & reflections","Insights and questions from our first meeting"],["11:45","Defining the essentials","What must be present for a national center to exist?"],["12:15","Institutional components","Purpose, people, governance, resources, and operations"],["12:45","Discussion & next steps","What should every national center include?"]],assignment:{label:"ACTION ITEM · DUE SEPTEMBER 1",title:"Imagine an institution worth building.",text:"Think of a center, institution, or organization you would like to build. Come prepared to discuss what would be necessary for it to exist."}},
+      {iso:"2026-08-25",date:"Aug 25",title:"Greetings & Introduction",detailTitle:"Greetings, introductions, and a first shared experience",description:"Participant introductions, course expectations, and an interactive center-building activity",milestone:"Shared expectations established",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira",caption:"The course began by connecting individual expectations with a collaborative exercise in building national centers.",agenda:[["11:30","Introductions & expectations · 15 min","Participants introduced themselves and shared their expectations for the course"],["11:45","Interactive center-building activity · 30 min","Groups built centers using the words each participant randomly selected"],["12:15","Activity recap · 15 min","The class reflected on the exercise and connected observations to national-center development"],["12:30","Syllabus & schedule · 15 min","Review of the course structure, syllabus, and semester schedule"],["12:45","Assignment & course tools · 15 min","Explanation of the website, upcoming assignment, and work expected outside class"]],assignment:{label:"SESSION 01 · FOLLOW-UP",title:"Prepare for the next discussion.",text:"Participants left with an introduction to the website, the course workflow, and the action item for Session 02."}},
+      {iso:"2026-09-01",date:"Sep 01",title:"Core Components of Institutions",detailTitle:"What does a national center need?",description:"Basic components of a national center and what it should include",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira",caption:"Strong national centers align people, purpose, structure, and resources.",agenda:[["11:30","Interactive activity · 15 min","A short collaborative exercise to frame the core components of institutions"],["11:45","General discussion · 45 min","Discussion of the basic components a national center needs in order to exist and operate"],["12:30","Recap · 15 min","Synthesize the main ideas, questions, and institutional components identified by the group"],["12:45","Planning the next class · 10 min","Connect this discussion to the next topic and define the preparation needed"],["12:55","Assignment · 5 min","Review the active action item and expectations for work outside class"]],assignment:{label:"ACTIVE ASSIGNMENT · DUE SEPTEMBER 1",title:"Imagine an institution worth building.",text:"Think of a center, institution, or organization you would like to build. Come prepared to discuss what would be necessary for it to exist."}},
       {iso:"2026-09-08",date:"Sep 08",title:"Case Studies",description:"Learning from institutions and national-center models",milestone:"To be defined",moderator:"To be announced"},
-      {iso:"2026-09-15",date:"Sep 15",title:"Week 4",description:"Topic to be announced",milestone:"To be defined",moderator:"To be announced"},
-      {iso:"2026-09-22",date:"Sep 22",title:"Week 5",description:"Topic to be announced",milestone:"To be defined",moderator:"To be announced"},
-      {iso:"2026-09-29",date:"Sep 29",title:"Week 6",description:"Topic to be announced",milestone:"To be defined",moderator:"To be announced"},
+      {iso:"2026-09-15",date:"Sep 15",title:"Mission",description:"Defining the purpose, direction, and public value of a national center",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
+      {iso:"2026-09-22",date:"Sep 22",title:"Business Plan",description:"Connecting mission, operations, resources, and long-term sustainability",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
+      {iso:"2026-09-29",date:"Sep 29",title:"Local Institution Visit",description:"Learning from the structure and operation of a local institution",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
       {iso:"2026-10-06",date:"Oct 06",title:"Week 7",description:"Topic to be announced",milestone:"To be defined",moderator:"To be announced"},
       {iso:"2026-10-13",date:"Oct 13",title:"Week 8",description:"Topic to be announced",milestone:"To be defined",moderator:"To be announced"},
       {iso:"2026-10-20",date:"Oct 20",title:"Week 9",description:"Topic to be announced",milestone:"To be defined",moderator:"To be announced"},
@@ -200,6 +204,11 @@
       selectedSession = Math.min(Math.max(Number(index) || 0, 0), sessions.length - 1);
       const session = sessions[selectedSession];
       const date = sessionDates[selectedSession];
+      const isNextSession = selectedSession === nextSessionIndex;
+      const isPastSession = date < today;
+      document.getElementById("weekContext").textContent = isNextSession ? "UPCOMING SESSION" : (isPastSession ? "PAST SESSION" : "FUTURE SESSION");
+      document.getElementById("weekContextText").textContent = isNextSession ? "You are viewing the next class meeting and its active assignment." : `You are reviewing Session ${String(selectedSession + 1).padStart(2,"0")}.`;
+      document.getElementById("returnNextSession").hidden = isNextSession;
       document.getElementById("weekDay").textContent = date.toLocaleDateString("en-US",{weekday:"short"}).toUpperCase();
       document.getElementById("weekDate").textContent = String(date.getDate()).padStart(2,"0");
       document.getElementById("weekMonth").textContent = date.toLocaleDateString("en-US",{month:"short"}).toUpperCase() + " · " + date.getFullYear();
@@ -212,6 +221,8 @@
       document.getElementById("assignmentLabel").textContent = assignment.label;
       document.getElementById("assignmentTitle").textContent = assignment.title;
       document.getElementById("assignmentText").textContent = assignment.text;
+      document.getElementById("assignmentBadge").hidden = !isNextSession;
+      document.getElementById("assignmentCard").classList.toggle("activeAssignment", isNextSession);
     }
 
     function openTab(id, scroll = true, sessionIndex = null) {
@@ -250,7 +261,7 @@
     document.addEventListener("keydown", event => { if (event.key === "Escape") closeMenus(); });
 
     const participants = [
-      "Phi H. Hoang","Sydney Barker","Deborah Obadofin","Nate Semmes","Jack Koch","Irene Marti Gil","Christopher K. Toepfer","Owen Plaisance","Nicholas Conrad Coxe","Elise R. Harmon","Thaiza Rodrigues de Freitas","Mohsen Norouzi","Seyedmajid Hosseini","Victoria E. Denham","Johnnie Kelley","Catherine Norris","Calley Chauvin","Pushpita Nag","Gabrielle Bush","Lillian Bodi"
+      "Dr. Phi H. Hoang","Sydney Barker","Deborah Obadofin","Nate Semmes","Dr. Jack Koch","Dr. Irene Marti Gil","Christopher K. Toepfer","Owen Plaisance","Nicholas Conrad Coxe","Elise R. Harmon","Dr. Thaiza Rodrigues de Freitas","Mohsen Norouzi","Seyedmajid Hosseini","Victoria E. Denham","Johnnie Kelley","Catherine Norris","Calley Chauvin","Pushpita Nag","Gabrielle Bush","Lillian Bodi","Dr. Yue Liu","Dr. Nathalia Teixeira","Dr. Terrence Tiersch","Jhony Benato"
     ];
     document.getElementById("participantList").innerHTML = participants.map(name => `<article><b>${name}</b></article>`).join("");
     const hashMatch = location.hash.slice(1).match(/^next-week-(\d+)$/);

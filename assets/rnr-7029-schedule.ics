@@ -36,11 +36,41 @@ URL:https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
 DESCRIPTION:Learning from institutions and national-center models. Microsoft Teams: https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
 END:VEVENT
 BEGIN:VEVENT
-UID:rnr7029-20260915-weekly@nationalcenterexperts
+UID:rnr7029-20260915-04@nationalcenterexperts
 DTSTAMP:20260827T120000Z
 DTSTART;TZID=America/Chicago:20260915T113000
 DTEND;TZID=America/Chicago:20260915T130000
-RRULE:FREQ=WEEKLY;COUNT=13;BYDAY=TU
+SUMMARY:RNR 7029 - Mission
+LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
+URL:https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
+DESCRIPTION:Defining the purpose\, direction\, and public value of a national center. Moderators: Dr. Yue Liu\, Jhony Benato\, and Dr. Nathalia Teixeira.
+END:VEVENT
+BEGIN:VEVENT
+UID:rnr7029-20260922-05@nationalcenterexperts
+DTSTAMP:20260827T120000Z
+DTSTART;TZID=America/Chicago:20260922T113000
+DTEND;TZID=America/Chicago:20260922T130000
+SUMMARY:RNR 7029 - Business Plan
+LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
+URL:https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
+DESCRIPTION:Connecting mission\, operations\, resources\, and long-term sustainability. Moderators: Dr. Yue Liu\, Jhony Benato\, and Dr. Nathalia Teixeira.
+END:VEVENT
+BEGIN:VEVENT
+UID:rnr7029-20260929-06@nationalcenterexperts
+DTSTAMP:20260827T120000Z
+DTSTART;TZID=America/Chicago:20260929T113000
+DTEND;TZID=America/Chicago:20260929T130000
+SUMMARY:RNR 7029 - Local Institution Visit
+LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
+URL:https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
+DESCRIPTION:Learning from the structure and operation of a local institution. Moderators: Dr. Yue Liu\, Jhony Benato\, and Dr. Nathalia Teixeira.
+END:VEVENT
+BEGIN:VEVENT
+UID:rnr7029-20261006-weekly@nationalcenterexperts
+DTSTAMP:20260827T120000Z
+DTSTART;TZID=America/Chicago:20261006T113000
+DTEND;TZID=America/Chicago:20261006T130000
+RRULE:FREQ=WEEKLY;COUNT=10;BYDAY=TU
 SUMMARY:RNR 7029 - Weekly Session
 LOCATION:AGGRC Conference Room\, 2288 Gourrier Avenue\, Baton Rouge\, LA 70820
 URL:https://teams.microsoft.com/meet/217712106311517?p=z2RnZz2MWnhWnMYLc9
