@@ -1,6 +1,8 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <title>Vision Vanguard leadership logo</title>
-  <path d="M12 54V17L48 54V19" stroke="#0B3B4A" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
-  <path d="M48 2L51.5 8L58 11.5L51.5 15L48 22L44.5 15L38 11.5L44.5 8L48 2Z" fill="#0B3B4A"/>
-  <path d="M8 58H54" stroke="#0B3B4A" stroke-width="4" stroke-linecap="square"/>
+  <title>Building National Centers leadership compass</title>
+  <circle cx="32" cy="32" r="30" fill="#0B3B4A"/>
+  <circle cx="32" cy="32" r="29" stroke="#66D1A9" stroke-width="2"/>
+  <path d="M32 9L38 26L55 32L38 38L32 55L26 38L9 32L26 26L32 9Z" fill="white"/>
+  <path d="M32 15L35.8 28.2L49 32L35.8 35.8L32 49L28.2 35.8L15 32L28.2 28.2L32 15Z" fill="#66D1A9"/>
+  <circle cx="32" cy="32" r="5" fill="#0B3B4A"/>
 </svg>
