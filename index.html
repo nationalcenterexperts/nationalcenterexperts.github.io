@@ -88,6 +88,56 @@
       </div>
     </header>
 
+    <section class="homeExtension" id="home-extension" aria-labelledby="home-extension-title">
+      <section class="homeStory">
+        <div class="homeStoryHeading">
+          <p class="homeKicker">THE COURSE IN ONE VIEW</p>
+          <h2 id="home-extension-title">A national center is not a building. It is a system people choose to build together.</h2>
+        </div>
+        <div class="homeStoryCopy">
+          <p>This seminar follows the full arc of institution-building: define a public purpose, design the organization, align partners and resources, and create the habits that make the work sustainable.</p>
+          <p>Participants use cases, guest perspectives, discussion, and a developing class project to turn those questions into a practical framework.</p>
+          <button type="button" data-tab="syllabus">Read the syllabus <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="homePath" aria-labelledby="home-path-title">
+        <div class="homePathHeading">
+          <p class="homeKicker">THE INSTITUTION-BUILDING PATH</p>
+          <h2 id="home-path-title">Four questions guide the semester.</h2>
+          <p>Each part of the course adds another layer to a center that can create national value.</p>
+        </div>
+        <div class="homePathGrid">
+          <article><span>01 · PURPOSE</span><h3>Why should it exist?</h3><p>Clarify the mission, the need it answers, and the public value worth organizing around.</p></article>
+          <article><span>02 · PEOPLE</span><h3>Who must be at the table?</h3><p>Identify leaders, partners, participants, and communities whose trust makes the work possible.</p></article>
+          <article><span>03 · OPERATIONS</span><h3>How will the work happen?</h3><p>Connect governance, funding, responsibilities, communication, and everyday systems.</p></article>
+          <article><span>04 · SUSTAINABILITY</span><h3>What keeps it useful?</h3><p>Build evaluation, adaptation, durable relationships, and long-term relevance into the design.</p></article>
+        </div>
+      </section>
+
+      <section class="homeRhythm" aria-labelledby="home-rhythm-title">
+        <div class="homeRhythmLead">
+          <p class="homeKicker">HOW EACH WEEK WORKS</p>
+          <h2 id="home-rhythm-title">One conversation, one decision, one step forward.</h2>
+          <p>Tuesdays · 11:30 a.m.–1:00 p.m. · AGGRC Conference Room</p>
+        </div>
+        <div class="homeRhythmSteps">
+          <article><span>PREPARE</span><h3>Arrive with a question.</h3><p>Use the weekly action item to connect the topic to an institution worth building.</p></article>
+          <article><span>EXAMINE</span><h3>Learn from real choices.</h3><p>Study cases, guest experience, and the tradeoffs behind organizational decisions.</p></article>
+          <article><span>APPLY</span><h3>Turn insight into structure.</h3><p>Carry the strongest ideas into the class project and the next week’s discussion.</p></article>
+        </div>
+      </section>
+
+      <section class="homeFinalCta" aria-labelledby="home-cta-title">
+        <div><p class="homeKicker">YOUR COURSE HUB</p><h2 id="home-cta-title">Everything for the next conversation is one click away.</h2></div>
+        <div class="homeFinalActions">
+          <button type="button" data-tab="next-week">Open next week</button>
+          <button type="button" data-tab="schedule">View all 16 sessions</button>
+          <button type="button" data-tab="resources">Browse course files</button>
+        </div>
+      </section>
+    </section>
+
     <section class="workspace" id="workspace" aria-live="polite">
       <div class="windowBar">
         <div class="windowControls" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -235,6 +285,7 @@
       if (!tabs.includes(id)) id = "home";
       if (id === "next-week") renderWeek(sessionIndex === null ? nextSessionIndex : sessionIndex);
       document.getElementById("home-panel").hidden = id !== "home";
+      document.getElementById("home-extension").hidden = id !== "home";
       document.getElementById("workspace").hidden = id === "home";
       document.querySelectorAll("[data-panel]").forEach(panel => { panel.hidden = panel.dataset.panel !== id; });
       document.querySelectorAll(".taskTabs [data-tab]").forEach(button => button.classList.toggle("active", button.dataset.tab === id));
