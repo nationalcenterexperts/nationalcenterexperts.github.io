@@ -27,7 +27,7 @@ img { max-width: 100%; }
 /* Navigation */
 .taskbar { min-height: 76px; padding: 0 28px; background: var(--purple); color: white; border-top: 5px solid var(--gold); display: flex; align-items: stretch; position: sticky; top: 0; z-index: 30; box-shadow: 0 5px 18px rgba(3, 30, 35, .18); }
 .brandMenu { width: 58px; flex: 0 0 58px; position: relative; }
-.brand { width: 100%; height: 100%; padding: 0 12px 0 0; border: 0; background: transparent; color: white; display: flex; align-items: center; justify-content: flex-start; }
+.brand { width: 100%; height: 100%; padding: 0 0 0 12px; border: 0; background: transparent; color: white; display: flex; align-items: center; justify-content: flex-end; }
 .menuIcon { width: 26px; display: grid; gap: 5px; }
 .menuIcon i { height: 2px; border-radius: 3px; background: var(--gold); transition: width .2s ease; }
 .menuIcon i:nth-child(2) { width: 72%; }
@@ -40,7 +40,7 @@ img { max-width: 100%; }
 .aboutToggle span { margin-left: 5px; color: var(--gold); }
 .brandDropdown, .aboutDropdown, .adminDropdown { position: absolute; top: 100%; padding: 10px; border: 1px solid rgba(11,59,74,.16); background: white; color: var(--ink); box-shadow: 0 22px 50px rgba(2, 31, 38, .20); opacity: 0; visibility: hidden; transform: translateY(-7px); transition: opacity .18s ease, transform .18s ease, visibility .18s ease; }
 .brandDropdown.open, .aboutDropdown.open, .aboutNav:hover .aboutDropdown, .aboutNav:focus-within .aboutDropdown, .adminDropdown.open { opacity: 1; visibility: visible; transform: translateY(0); }
-.brandDropdown { left: -6px; width: 282px; border-radius: 0 0 10px 10px; }
+.brandDropdown { right: -6px; width: 282px; border-radius: 0 0 10px 10px; }
 .brandDropdown > div { padding: 11px 12px 14px; border-bottom: 1px solid var(--line); }
 .brandDropdown > div span, .adminDropdown > div > span { color: var(--purple); font-size: 8px; font-weight: 800; letter-spacing: .14em; }
 .brandDropdown > div b, .adminDropdown > div > b { display: block; margin-top: 7px; font-family: Georgia, serif; font-size: 19px; font-weight: 400; }
@@ -333,7 +333,7 @@ footer a { color: var(--gold); font-weight: 800; }
   .adminMenu { width: 54px; flex-basis: 54px; }
   .adminToggle { justify-content: center; }
   .adminToggle > span:last-child { display: none; }
-  .brandDropdown { left: 0; width: min(290px, calc(100vw - 20px)); }
+  .brandDropdown { right: 0; width: min(290px, calc(100vw - 20px)); }
   .adminDropdown { right: 0; width: min(320px, calc(100vw - 20px)); }
   .courseHeader { padding-top: 52px; }
   .eyebrow { align-items: flex-start; flex-direction: column; gap: 10px; }
@@ -450,12 +450,11 @@ footer a { color: var(--gold); font-weight: 800; }
   .homeRhythmSteps h3 { font-size: 25px; }
 }
 
-
 /* Site identity */
-.siteIdentity { flex: 0 0 auto; min-width: 212px; padding: 0 20px 0 0; border: 0; background: transparent; color: white; display: flex; align-items: center; gap: 11px; text-align: left; }
+.siteIdentity { flex: 0 0 auto; min-width: 270px; padding: 0 20px 0 0; border: 0; background: transparent; color: white; display: flex; align-items: center; gap: 11px; text-align: left; }
 .siteIdentity img { width: 38px; height: 38px; flex: 0 0 38px; display: block; }
 .siteIdentity span { min-width: 0; display: block; }
-.siteIdentity small { display: block; margin-bottom: 4px; color: var(--gold); font-size: 9px; font-weight: 800; letter-spacing: .14em; }
+.siteIdentity small { display: block; margin-bottom: 4px; color: var(--gold); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
 .siteIdentity b { display: block; color: white; font-family: Georgia, serif; font-size: 13px; font-weight: 400; line-height: 1.1; white-space: nowrap; }
 .siteIdentity:hover img, .siteIdentity:focus-visible img { transform: scale(1.06); }
 .siteIdentity:focus-visible { outline: 2px solid var(--gold); outline-offset: -5px; }
@@ -469,3 +468,4 @@ footer a { color: var(--gold); font-weight: 800; }
   .siteIdentity { min-width: 46px; width: 46px; padding-right: 8px; }
   .siteIdentity img { width: 34px; height: 34px; flex-basis: 34px; }
 }
+
