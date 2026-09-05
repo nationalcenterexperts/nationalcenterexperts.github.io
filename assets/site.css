@@ -132,6 +132,29 @@ img { max-width: 100%; }
 .facts span { min-height: 140px; padding: 32px 4vw; border-left: 1px solid rgba(255,255,255,.15); display: flex; flex-direction: column; justify-content: space-between; color: rgba(255,255,255,.74); font-size: 8px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .facts span:first-child { border-left: 0; }
 .facts b { color: var(--gold); font-family: Georgia, serif; font-size: 42px; font-weight: 400; letter-spacing: -.04em; }
+.incFoundation { padding: clamp(72px, 8vw, 112px) 7vw; background: #eaf2f0; }
+.incFoundationIntro { max-width: 930px; }
+.incFoundationIntro h2, .incGoalsHeading h2 { margin: 0; color: var(--purple); font-family: Georgia, serif; font-size: clamp(40px, 4.7vw, 68px); font-weight: 400; line-height: 1.04; letter-spacing: -.04em; }
+.incFoundationIntro > p:last-child { max-width: 760px; margin: 28px 0 0; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.incPillars { margin-top: 60px; border-top: 1px solid var(--line-strong); display: grid; grid-template-columns: repeat(3, 1fr); }
+.incPillars article { min-height: 390px; padding: 36px clamp(24px, 3vw, 42px); border-left: 1px solid var(--line-strong); }
+.incPillars article:first-child { border-left: 0; padding-left: 0; }
+.incPillars span, .incGoalGrid span { color: var(--purple-soft); font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+.incPillars h3 { margin: 54px 0 20px; color: var(--purple); font-family: Georgia, serif; font-size: 28px; font-weight: 400; line-height: 1.2; }
+.incPillars p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.72; }
+.incGoals { margin-top: clamp(72px, 9vw, 128px); padding-top: clamp(58px, 7vw, 92px); border-top: 5px solid var(--gold); }
+.incGoalsHeading { max-width: 930px; }
+.incGoalGrid { margin-top: 52px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.incGoalGrid article { padding: clamp(34px, 4vw, 52px); background: white; border-top: 6px solid var(--purple); box-shadow: 0 16px 42px rgba(2, 29, 35, .08); }
+.incGoalGrid article:last-child { background: var(--purple); border-top-color: var(--gold); color: white; }
+.incGoalGrid article:last-child span { color: var(--gold); }
+.incGoalGrid h3 { margin: 24px 0 28px; color: var(--purple); font-family: Georgia, serif; font-size: 30px; font-weight: 400; line-height: 1.22; }
+.incGoalGrid article:last-child h3 { color: white; }
+.incGoalGrid ul { margin: 0; padding: 0; list-style: none; }
+.incGoalGrid li { padding: 16px 0 16px 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; line-height: 1.6; position: relative; }
+.incGoalGrid li::before { content: "→"; position: absolute; left: 0; color: var(--gold-deep); font-weight: 800; }
+.incGoalGrid article:last-child li { border-color: rgba(255,255,255,.18); color: rgba(255,255,255,.78); }
+.incGoalGrid article:last-child li::before { color: var(--gold); }
 
 /* Syllabus */
 .syllabusPanel { padding: 54px 4vw; background: #e6ebe9; }
@@ -318,6 +341,11 @@ footer a { color: var(--gold); font-weight: 800; }
   .facts { grid-template-columns: 1fr 1fr; }
   .facts span:nth-child(3) { border-left: 0; border-top: 1px solid rgba(255,255,255,.15); }
   .facts span:nth-child(4) { border-top: 1px solid rgba(255,255,255,.15); }
+  .incPillars { grid-template-columns: 1fr; }
+  .incPillars article { min-height: 0; padding: 38px 0; border-left: 0; border-top: 1px solid var(--line-strong); }
+  .incPillars article:first-child { border-top: 0; }
+  .incPillars h3 { margin-top: 30px; }
+  .incGoalGrid { grid-template-columns: 1fr; }
   .syllabusLead, .learningModel, .syllabusDetails { grid-template-columns: 1fr; gap: 40px; }
   .coursePurpose > div { grid-template-columns: 1fr; gap: 20px; }
   .historyHeading { grid-template-columns: 1fr; }
@@ -347,6 +375,11 @@ footer a { color: var(--gold); font-weight: 800; }
   .aboutHero .sectionPhoto { width: calc(100% + 44px); height: 260px; margin: 40px -22px 0; }
   .aboutHero .sectionPhoto figcaption { left: 22px; }
   .aboutCopy { padding: 46px 22px 24px; }
+  .incFoundation { padding: 58px 22px; }
+  .incFoundationIntro h2, .incGoalsHeading h2 { font-size: clamp(35px, 10.5vw, 49px); }
+  .incPillars { margin-top: 42px; }
+  .incGoalGrid { margin-top: 38px; }
+  .incGoalGrid article { padding: 32px 24px; }
   .courseLens article { padding: 34px 22px; }
   .facts { grid-template-columns: 1fr; }
   .facts span { min-height: 120px; padding: 27px 22px; border-left: 0; border-top: 1px solid rgba(255,255,255,.15); }
