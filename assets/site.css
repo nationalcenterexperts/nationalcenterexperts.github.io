@@ -265,6 +265,13 @@ img { max-width: 100%; }
 .schedulePanel > .sectionPhoto { height: 320px; }
 .fullCalendarButton { display: inline-block; align-self: end; padding: 13px 15px; border: 2px solid var(--purple); color: var(--purple); font-size: 9px; font-weight: 800; text-align: center; text-transform: uppercase; }
 .fullCalendarButton:hover, .fullCalendarButton:focus-visible { background: var(--purple); color: white; outline: 2px solid var(--gold); outline-offset: 2px; }
+.scheduleQuestions { margin: 56px 0 70px; padding: clamp(38px, 5vw, 66px); border-top: 6px solid var(--gold); background: var(--purple); color: white; display: grid; grid-template-columns: minmax(230px, .75fr) minmax(0, 1.5fr); gap: clamp(42px, 6vw, 90px); }
+.scheduleQuestionsIntro .sectionLabel { color: var(--gold); }
+.scheduleQuestionsIntro h2 { margin: 28px 0 20px; color: white; font-family: Georgia, serif; font-size: clamp(34px, 4vw, 54px); font-weight: 400; line-height: 1.06; letter-spacing: -.035em; }
+.scheduleQuestionsIntro > p:last-child { max-width: 430px; margin: 0; color: rgba(255,255,255,.74); font-size: 16px; line-height: 1.65; }
+.scheduleQuestions ol { margin: 0; padding: 0; list-style: none; counter-reset: question; display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(28px, 4vw, 58px); }
+.scheduleQuestions li { min-height: 92px; padding: 20px 0 18px 48px; border-top: 1px solid rgba(255,255,255,.18); position: relative; color: white; font-family: Georgia, serif; font-size: 19px; line-height: 1.4; counter-increment: question; }
+.scheduleQuestions li::before { content: counter(question, decimal-leading-zero); position: absolute; left: 0; top: 23px; color: var(--gold); font-family: Arial, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
 .sessionList { margin-top: 44px; border-bottom: 1px solid var(--line); }
 .sessionHead, .session { display: grid; grid-template-columns: 58px 95px minmax(250px,1fr) minmax(150px,.7fr) minmax(170px,.8fr); gap: 18px; align-items: center; }
 .sessionHead { padding: 0 0 13px; color: var(--purple); font-size: 7px; font-weight: 800; letter-spacing: .13em; }
@@ -384,6 +391,7 @@ footer a { color: var(--gold); font-weight: 800; }
   .incGoalGrid { grid-template-columns: 1fr; }
   .incClosing { grid-template-columns: 1fr; align-items: start; }
   .incClosing button { width: fit-content; }
+  .scheduleQuestions { grid-template-columns: 1fr; gap: 42px; }
   .syllabusLead, .learningModel, .syllabusDetails { grid-template-columns: 1fr; gap: 40px; }
   .coursePurpose > div { grid-template-columns: 1fr; gap: 20px; }
   .historyHeading { grid-template-columns: 1fr; }
@@ -451,6 +459,10 @@ footer a { color: var(--gold); font-weight: 800; }
   .weekHistory { padding: 48px 22px; }
   .pastWeekList { grid-template-columns: 1fr; }
   .schedulePanel > .sectionPhoto { height: 230px; }
+  .scheduleQuestions { margin: 40px -22px 54px; padding: 42px 22px; }
+  .scheduleQuestions ol { grid-template-columns: 1fr; }
+  .scheduleQuestions li { min-height: 0; padding-top: 18px; padding-bottom: 18px; font-size: 18px; }
+  .scheduleQuestions li::before { top: 21px; }
   .session { grid-template-columns: 34px 66px 1fr; gap: 8px; }
   .session:hover, .session:focus-visible { margin: 0; width: 100%; padding: 19px 7px; }
   .sessionTopic h3 { font-size: 18px; }
