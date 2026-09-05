@@ -11,7 +11,7 @@
   <meta property="og:image" content="https://nationalcenterexperts.github.io/assets/hero-aquatic-center-v2.webp">
   <title>RNR 7029 | Building National Centers</title>
   <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=schedule-questions-v2">
+  <link rel="stylesheet" href="assets/site.css?v=schedule-format-v1">
 </head>
 <body>
   <main>
@@ -216,7 +216,7 @@
       </article>
 
       <article class="windowPanel schedulePanel staticPanel" id="schedule-panel" data-panel="schedule" hidden>
-        <div class="panelHeading compact"><p class="sectionLabel">SEMESTER SCHEDULE</p><h2>Coordinate the national network.</h2><p>August 25–December 8<br>Sixteen sessions connecting research, communication, leadership, and shared purpose.</p><a class="fullCalendarButton" href="assets/rnr-7029-schedule.ics" download>Add the full schedule to your calendar ↓</a></div>
+        <div class="panelHeading compact"><p class="sectionLabel">SEMESTER SCHEDULE</p><h2>Coordinate the national network.</h2><p class="scheduleSummary">August 25–December 8<br>Sixteen sessions connecting research, communication, leadership, and shared purpose.</p><a class="fullCalendarButton" href="assets/rnr-7029-schedule.ics" download>Add the full schedule to your calendar ↓</a></div>
         <figure class="sectionPhoto"><img src="assets/section-schedule-aquatic-v2.webp" alt="Researchers coordinating a shared schedule in the field"><figcaption>Shared timing keeps participants and moderators moving together.</figcaption></figure>
         <div class="sessionList"><div class="sessionHead"><span>SESSION</span><span>DATE</span><span>TOPIC</span><span>PROJECT MILESTONE</span><span>MODERATORS</span></div><div id="sessionList"></div></div>
         <section class="scheduleQuestions" aria-labelledby="schedule-questions-title">
@@ -340,7 +340,13 @@
       if (scroll) (id === "home" ? document.body : document.getElementById("workspace")).scrollIntoView({behavior:"smooth",block:"start"});
     }
 
-    document.getElementById("sessionList").innerHTML = sessions.map((session,index) => `<button class="session" type="button" data-tab="next-week" data-session="${index}" aria-label="Open session ${index + 1}: ${session.title}"><span>${String(index+1).padStart(2,"0")}</span><time datetime="${session.iso}">${session.date.toUpperCase()}</time><span class="sessionTopic"><h3>${session.title}</h3><small>${session.description}</small></span><span class="sessionMilestone"><small>PROJECT MILESTONE</small><b>${session.milestone}</b></span><span class="sessionModerator"><small>MODERATORS</small><b>${session.moderator}</b></span></button>`).join("");
+    let visibleScheduleMonth = "";
+    document.getElementById("sessionList").innerHTML = sessions.map((session,index) => {
+      const monthName = new Date(`${session.iso}T12:00:00Z`).toLocaleString("en-US", {month:"long", timeZone:"UTC"});
+      const monthDivider = monthName === visibleScheduleMonth ? "" : `<p class="sessionMonth"><span>${monthName}</span><b>${session.iso.slice(0,4)}</b></p>`;
+      visibleScheduleMonth = monthName;
+      return `${monthDivider}<button class="session" type="button" data-tab="next-week" data-session="${index}" aria-label="Open session ${index + 1}: ${session.title}"><span>${String(index+1).padStart(2,"0")}</span><time datetime="${session.iso}">${session.date.toUpperCase()}</time><span class="sessionTopic"><h3>${session.title}</h3><small>${session.description}</small></span><span class="sessionMilestone"><small>PROJECT MILESTONE</small><b>${session.milestone}</b></span><span class="sessionModerator"><small>MODERATORS</small><b>${session.moderator}</b></span></button>`;
+    }).join("");
     const pastSessions = sessions.map((session,index) => ({session,index})).filter(item => sessionDates[item.index] < today);
     document.getElementById("pastWeekList").innerHTML = pastSessions.length ? pastSessions.map(({session,index}) => `<button type="button" data-tab="next-week" data-session="${index}"><span>SESSION ${String(index+1).padStart(2,"0")} · ${session.date.toUpperCase()}</span><h3>${session.title}</h3><p>${session.description}</p><b>Review this week →</b></button>`).join("") : `<p class="noPastWeeks">Completed sessions will appear here after the course begins.</p>`;
 

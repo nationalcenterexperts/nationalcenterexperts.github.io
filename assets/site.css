@@ -262,27 +262,33 @@ img { max-width: 100%; }
 
 /* Schedule */
 .schedulePanel { background: white; }
-.schedulePanel > .sectionPhoto { height: 320px; }
-.fullCalendarButton { display: inline-block; align-self: end; padding: 13px 15px; border: 2px solid var(--purple); color: var(--purple); font-size: 9px; font-weight: 800; text-align: center; text-transform: uppercase; }
+.schedulePanel > .panelHeading { margin-bottom: 34px; }
+.scheduleSummary { grid-column: 3; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.schedulePanel > .sectionPhoto { height: 240px; margin: 34px 0 38px; }
+.fullCalendarButton { grid-column: 2; width: fit-content; justify-self: start; display: inline-block; align-self: end; padding: 13px 15px; border: 2px solid var(--purple); color: var(--purple); font-size: 12px; font-weight: 800; text-align: center; text-transform: uppercase; }
 .fullCalendarButton:hover, .fullCalendarButton:focus-visible { background: var(--purple); color: white; outline: 2px solid var(--gold); outline-offset: 2px; }
-.scheduleQuestions { margin: 70px 0 0; padding: clamp(32px, 4vw, 52px); border-top: 5px solid var(--gold); background: var(--purple); color: white; display: grid; grid-template-columns: minmax(230px, .75fr) minmax(0, 1.5fr); gap: clamp(36px, 5vw, 72px); }
-.scheduleQuestionsIntro .sectionLabel { color: var(--gold); }
-.scheduleQuestionsIntro h2 { margin: 20px 0 16px; color: white; font-family: Georgia, serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400; line-height: 1.12; letter-spacing: -.025em; }
-.scheduleQuestionsIntro > p:last-child { max-width: 430px; margin: 0; color: rgba(255,255,255,.74); font-size: 15px; line-height: 1.6; }
+.scheduleQuestions { margin: 64px 0 0; padding: clamp(28px, 3.5vw, 44px); border-top: 5px solid var(--gold); background: #eaf2f0; color: var(--ink); display: grid; grid-template-columns: minmax(210px, .65fr) minmax(0, 1.65fr); gap: clamp(32px, 4vw, 56px); }
+.scheduleQuestionsIntro .sectionLabel { color: var(--purple); }
+.scheduleQuestionsIntro h2 { margin: 18px 0 14px; color: var(--purple); font-family: Georgia, serif; font-size: clamp(26px, 2.7vw, 36px); font-weight: 400; line-height: 1.14; letter-spacing: -.02em; }
+.scheduleQuestionsIntro > p:last-child { max-width: 430px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
 .scheduleQuestions ol { margin: 0; padding: 0; list-style: none; counter-reset: question; display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(28px, 4vw, 58px); }
-.scheduleQuestions li { min-height: 76px; padding: 16px 0 14px 44px; border-top: 1px solid rgba(255,255,255,.18); position: relative; color: white; font-family: Georgia, serif; font-size: 16px; line-height: 1.45; counter-increment: question; }
-.scheduleQuestions li::before { content: counter(question, decimal-leading-zero); position: absolute; left: 0; top: 19px; color: var(--gold); font-family: Arial, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+.scheduleQuestions li { min-height: 68px; padding: 13px 0 12px 42px; border-top: 1px solid var(--line-strong); position: relative; color: var(--purple); font-family: Georgia, serif; font-size: 16px; line-height: 1.45; counter-increment: question; }
+.scheduleQuestions li::before { content: counter(question, decimal-leading-zero); position: absolute; left: 0; top: 16px; color: var(--gold-deep); font-family: Arial, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
 .sessionList { margin-top: 44px; border-bottom: 1px solid var(--line); }
 .sessionHead, .session { display: grid; grid-template-columns: 58px 95px minmax(250px,1fr) minmax(150px,.7fr) minmax(170px,.8fr); gap: 18px; align-items: center; }
-.sessionHead { padding: 0 0 13px; color: var(--purple); font-size: 7px; font-weight: 800; letter-spacing: .13em; }
+.sessionHead { padding: 0 0 13px; color: var(--purple); font-size: 12px; font-weight: 800; letter-spacing: .1em; }
 .session { width: 100%; padding: 19px 0; border: 0; border-top: 1px solid var(--line); background: transparent; text-align: left; }
 .session:hover, .session:focus-visible { margin: 0 -12px; width: calc(100% + 24px); padding: 19px 12px; background: #e8f2ef; outline: none; }
-.session > span:first-child, .session time { color: var(--purple-soft); font-size: 9px; font-weight: 800; }
+.session > span:first-child, .session time { color: var(--purple-soft); font-size: 12px; font-weight: 800; }
 .sessionTopic h3 { margin: 0; color: var(--purple); font-family: Georgia, serif; font-size: 20px; font-weight: 400; }
-.sessionTopic small { display: block; margin-top: 5px; color: var(--muted); font-size: 9px; line-height: 1.45; }
+.sessionTopic small { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; line-height: 1.45; }
 .sessionMilestone, .sessionModerator { min-width: 0; padding-left: 17px; border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 5px; }
-.sessionMilestone b, .sessionModerator b { color: var(--ink); font-family: Georgia, serif; font-size: 13px; font-weight: 400; line-height: 1.35; overflow-wrap: anywhere; }
+.sessionMilestone b, .sessionModerator b { color: var(--ink); font-family: Georgia, serif; font-size: 14px; font-weight: 400; line-height: 1.35; overflow-wrap: anywhere; }
 .sessionMilestone small, .sessionModerator small { display: none; }
+.sessionMonth { margin: 28px 0 0; padding: 10px 0 8px; border-bottom: 3px solid var(--gold); color: var(--purple); display: flex; align-items: baseline; justify-content: space-between; }
+.sessionMonth:first-child { margin-top: 8px; }
+.sessionMonth span { font-family: Georgia, serif; font-size: 20px; }
+.sessionMonth b { color: var(--gold-deep); font-size: 12px; letter-spacing: .1em; }
 
 /* Resources */
 .resourcesPanel { background: #eef3f1; }
@@ -345,15 +351,20 @@ footer a { color: var(--gold); font-weight: 800; }
   .headerCopy { width: 67vw; }
   .courseMeta { right: 4vw; }
   .panelHeading, .panelHeading.compact { grid-template-columns: 145px 1fr; }
-  .panelHeading.compact > p:last-child, .fullCalendarButton { grid-column: 2; }
+  .panelHeading.compact > p:last-child, .scheduleSummary, .fullCalendarButton { grid-column: 2; }
   .weekDetail { grid-template-columns: .55fr 1.8fr; }
   .prepare { grid-column: 1 / -1; margin: 0; border-top-width: 6px; }
   .historyHeading { grid-template-columns: 145px 1.6fr; }
   .historyHeading > p:last-child { grid-column: 2; }
   .sessionHead { display: none; }
-  .session { grid-template-columns: 48px 82px 1fr; gap: 11px 15px; }
-  .sessionMilestone, .sessionModerator { grid-column: 3; padding: 10px 0 0; border-left: 0; border-top: 1px solid var(--line); }
-  .sessionMilestone small, .sessionModerator small { display: block; color: var(--purple); font-size: 7px; font-weight: 800; letter-spacing: .12em; }
+  .session { grid-template-columns: 48px 82px minmax(0,1fr) minmax(0,1fr); gap: 11px 18px; align-items: start; }
+  .session > span:first-child { grid-column: 1; grid-row: 1 / 3; padding-top: 4px; }
+  .session time { grid-column: 2; grid-row: 1 / 3; padding-top: 4px; }
+  .sessionTopic { grid-column: 3 / -1; grid-row: 1; }
+  .sessionMilestone { grid-column: 3; grid-row: 2; }
+  .sessionModerator { grid-column: 4; grid-row: 2; padding-left: 18px; border-left: 1px solid var(--line); }
+  .sessionMilestone, .sessionModerator { padding-top: 10px; border-top: 1px solid var(--line); }
+  .sessionMilestone small, .sessionModerator small { display: block; color: var(--purple); font-size: 12px; font-weight: 800; letter-spacing: .09em; }
 }
 
 @media (max-width: 1000px) {
@@ -374,7 +385,7 @@ footer a { color: var(--gold); font-weight: 800; }
   .homeMission article { min-height: 130px; border-left: 0; border-top: 1px solid var(--line); }
   .homeMission article:first-child { border-top: 0; }
   .panelHeading, .panelHeading.compact { grid-template-columns: 1fr; }
-  .panelHeading.compact > p:last-child, .fullCalendarButton { grid-column: 1; }
+  .panelHeading.compact > p:last-child, .scheduleSummary, .fullCalendarButton { grid-column: 1; }
   .aboutHero .sectionPhoto { height: 320px; }
   .incStatementGrid { grid-template-columns: 1fr; }
   .incStatementGrid article { min-height: 0; }
@@ -458,11 +469,16 @@ footer a { color: var(--gold); font-weight: 800; }
   .prepare { padding: 30px 24px; }
   .weekHistory { padding: 48px 22px; }
   .pastWeekList { grid-template-columns: 1fr; }
-  .schedulePanel > .sectionPhoto { height: 230px; }
+  .schedulePanel > .sectionPhoto { height: 210px; }
   .scheduleQuestions { margin: 54px -22px 0; padding: 36px 22px; }
   .scheduleQuestions ol { grid-template-columns: 1fr; }
   .scheduleQuestions li { min-height: 0; font-size: 16px; }
   .session { grid-template-columns: 34px 66px 1fr; gap: 8px; }
+  .session > span:first-child { grid-column: 1; grid-row: 1; }
+  .session time { grid-column: 2; grid-row: 1; }
+  .sessionTopic { grid-column: 3; grid-row: 1; }
+  .sessionMilestone { grid-column: 3; grid-row: 2; }
+  .sessionModerator { grid-column: 3; grid-row: 3; padding-left: 0; border-left: 0; }
   .session:hover, .session:focus-visible { margin: 0; width: 100%; padding: 19px 7px; }
   .sessionTopic h3 { font-size: 18px; }
   .sessionMilestone, .sessionModerator { grid-column: 3; }
