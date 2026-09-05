@@ -302,6 +302,13 @@
       document.getElementById("assignmentCard").classList.toggle("activeAssignment", isNextSession);
     }
 
+    function pageUrl(id, sessionIndex = null) {
+      if (!tabs.includes(id) || id === "home") return "./";
+      const params = new URLSearchParams({page:id});
+      if (id === "next-week" && sessionIndex !== null) params.set("session", String(sessionIndex + 1));
+      return `?${params.toString()}`;
+    }
+
     function openTab(id, scroll = true, sessionIndex = null) {
       if (!tabs.includes(id)) id = "home";
       if (id === "next-week") renderWeek(sessionIndex === null ? nextSessionIndex : sessionIndex);
@@ -314,8 +321,6 @@
       document.getElementById("windowNumber").textContent = String(tabs.indexOf(id) + 1).padStart(2,"0");
       document.getElementById("windowLabel").textContent = labels[id];
       closeMenus();
-      const hash = id === "next-week" ? `#next-week-${selectedSession + 1}` : `#${id}`;
-      history.replaceState(null,"",hash);
       if (scroll) (id === "home" ? document.body : document.getElementById("workspace")).scrollIntoView({behavior:"smooth",block:"start"});
     }
 
@@ -328,7 +333,7 @@
       if (tabButton) {
         event.preventDefault();
         const sessionIndex = tabButton.dataset.session === undefined ? null : Number(tabButton.dataset.session);
-        openTab(tabButton.dataset.tab, true, sessionIndex);
+        window.location.assign(pageUrl(tabButton.dataset.tab, sessionIndex));
         return;
       }
       if (!document.getElementById("brandMenu").contains(event.target) && !document.getElementById("aboutNav").contains(event.target) && !document.getElementById("adminMenu").contains(event.target)) closeMenus();
@@ -355,8 +360,12 @@
       window.location.href = `mailto:nationalcenterexperts@gmail.com?subject=${subject}&body=${body}`;
     });
 
+    const pageParams = new URLSearchParams(location.search);
+    const requestedPage = pageParams.get("page");
+    const requestedSession = pageParams.has("session") ? Number(pageParams.get("session")) - 1 : null;
     const hashMatch = location.hash.slice(1).match(/^next-week-(\d+)$/);
-    if (hashMatch) openTab("next-week", false, Number(hashMatch[1]) - 1);
+    if (requestedPage) openTab(requestedPage, false, requestedSession);
+    else if (hashMatch) openTab("next-week", false, Number(hashMatch[1]) - 1);
     else openTab(location.hash.slice(1) || "home", false);
   </script>
 </body>
