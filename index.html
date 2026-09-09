@@ -224,13 +224,15 @@
             <h3 id="suggestion-title">Suggest a topic for a future session.</h3>
             <p>Share a subject you would like the class to discuss and tell us which meeting might be the best fit.</p>
           </div>
-          <form id="topicSuggestionForm">
-            <label><span>Your name</span><input id="suggestionName" name="name" type="text" required autocomplete="name"></label>
-            <label><span>Suggested topic</span><input id="suggestionTopic" name="topic" type="text" required></label>
-            <label><span>Preferred session or date <small>(optional)</small></span><input id="suggestionSession" name="session" type="text" placeholder="e.g., Session 8 or October 13"></label>
-            <label class="suggestionNotes"><span>Why would this topic be useful? <small>(optional)</small></span><textarea id="suggestionNotes" name="notes" rows="4"></textarea></label>
-            <button type="submit">Prepare suggestion email →</button>
-            <p class="suggestionHint">Your email app will open with the suggestion ready to send to the course organizers.</p>
+          <form id="topicSuggestionForm" action="https://formsubmit.co/nationalcenterexperts@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="RNR 7029 topic suggestion">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://nationalcenterexperts.github.io/?page=schedule&amp;suggestion=sent">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="srOnly" aria-hidden="true">
+            <label><span>Suggested topic</span><input id="suggestionTopic" name="Suggested topic" type="text" required></label>
+            <label><span>Preferred session or date</span><input id="suggestionSession" name="Preferred session or date" type="text" required placeholder="e.g., Session 8 or October 13"></label>
+            <button type="submit">Send suggestion</button>
+            <p class="suggestionHint" id="suggestionStatus" role="status">Your suggestion will be sent directly to the course organizers.</p>
           </form>
         </section>
         <div class="sessionList"><div class="sessionHead"><span>SESSION</span><span>DATE</span><span>TOPIC</span><span>PROJECT MILESTONE</span><span>MODERATORS</span></div><div id="sessionList"></div></div>
@@ -384,18 +386,10 @@
       "Dr. Phi H. Hoang","Sydney Barker","Deborah Obadofin","Nate Semmes","Dr. Jack Koch","Dr. Irene Marti Gil","Christopher K. Toepfer","Owen Plaisance","Nicholas Conrad Coxe","Elise R. Harmon","Dr. Thaiza Rodrigues de Freitas","Mohsen Norouzi","Seyedmajid Hosseini","Victoria E. Denham","Johnnie Kelley","Catherine Norris","Calley Chauvin","Pushpita Nag","Gabrielle Bush","Lillian Bodi","Dr. Yue Liu","Dr. Nathalia Teixeira","Dr. Terrence Tiersch","Jhony Benato"
     ];
     document.getElementById("participantList").innerHTML = participants.map(name => `<article><b>${name}</b></article>`).join("");
-    document.getElementById("topicSuggestionForm").addEventListener("submit", event => {
-      event.preventDefault();
-      const name = document.getElementById("suggestionName").value.trim();
-      const topic = document.getElementById("suggestionTopic").value.trim();
-      const session = document.getElementById("suggestionSession").value.trim() || "No preference";
-      const notes = document.getElementById("suggestionNotes").value.trim() || "No additional notes";
-      const subject = encodeURIComponent("RNR 7029 topic suggestion");
-      const body = encodeURIComponent(`Name: ${name}\nSuggested topic: ${topic}\nPreferred session or date: ${session}\n\nWhy this topic would be useful:\n${notes}`);
-      window.location.href = `mailto:nationalcenterexperts@gmail.com?subject=${subject}&body=${body}`;
-    });
-
     const pageParams = new URLSearchParams(location.search);
+    if (pageParams.get("suggestion") === "sent") {
+      document.getElementById("suggestionStatus").textContent = "Thank you. Your suggestion was sent.";
+    }
     const requestedPage = pageParams.get("page");
     const requestedSession = pageParams.has("session") ? Number(pageParams.get("session")) - 1 : null;
     const hashMatch = location.hash.slice(1).match(/^next-week-(\d+)$/);
