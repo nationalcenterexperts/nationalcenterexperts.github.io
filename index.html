@@ -218,6 +218,21 @@
       <article class="windowPanel schedulePanel staticPanel" id="schedule-panel" data-panel="schedule" hidden>
         <div class="panelHeading compact"><p class="sectionLabel">SEMESTER SCHEDULE</p><h2>Coordinate the national network.</h2><p class="scheduleSummary">August 25–December 8<br>Sixteen sessions connecting research, communication, leadership, and shared purpose.</p><a class="fullCalendarButton" href="assets/rnr-7029-schedule.ics" download>Add to calendar ↓</a></div>
         <figure class="sectionPhoto"><img src="assets/section-schedule-aquatic-v2.webp" alt="Researchers coordinating a shared schedule in the field"><figcaption>Shared timing keeps participants and moderators moving together.</figcaption></figure>
+        <section class="scheduleSuggestion" aria-labelledby="suggestion-title">
+          <div class="suggestionIntro">
+            <p class="sectionLabel">HELP SHAPE THE SEMESTER</p>
+            <h3 id="suggestion-title">Suggest a topic for a future session.</h3>
+            <p>Share a subject you would like the class to discuss and tell us which meeting might be the best fit.</p>
+          </div>
+          <form id="topicSuggestionForm">
+            <label><span>Your name</span><input id="suggestionName" name="name" type="text" required autocomplete="name"></label>
+            <label><span>Suggested topic</span><input id="suggestionTopic" name="topic" type="text" required></label>
+            <label><span>Preferred session or date <small>(optional)</small></span><input id="suggestionSession" name="session" type="text" placeholder="e.g., Session 8 or October 13"></label>
+            <label class="suggestionNotes"><span>Why would this topic be useful? <small>(optional)</small></span><textarea id="suggestionNotes" name="notes" rows="4"></textarea></label>
+            <button type="submit">Prepare suggestion email →</button>
+            <p class="suggestionHint">Your email app will open with the suggestion ready to send to the course organizers.</p>
+          </form>
+        </section>
         <div class="sessionList"><div class="sessionHead"><span>SESSION</span><span>DATE</span><span>TOPIC</span><span>PROJECT MILESTONE</span><span>MODERATORS</span></div><div id="sessionList"></div></div>
         <section class="scheduleQuestions" aria-labelledby="schedule-questions-title">
           <div class="scheduleQuestionsIntro"><p class="sectionLabel">A FRAMEWORK FOR THE SEMESTER</p><h2 id="schedule-questions-title">Important questions to think about.</h2><p>Use these questions to test an idea for a national center throughout the course.</p></div>
@@ -261,10 +276,10 @@
     const labels = {home:"HOME",about:"ABOUT US",participants:"PARTICIPANTS",contact:"CONTACT",syllabus:"SYLLABUS","next-week":"NEXT WEEK",schedule:"SCHEDULE",resources:"RESOURCES"};
     const sessions = [
       {iso:"2026-08-25",date:"Aug 25",title:"Greetings & Introduction",detailTitle:"Greetings, introductions, and a first shared experience",description:"Participant introductions, course expectations, and an interactive center-building activity",milestone:"Shared expectations established",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira",caption:"The course began by connecting individual expectations with a collaborative exercise in building national centers.",agenda:[["11:30","Introductions & expectations · 15 min","Participants introduced themselves and shared their expectations for the course"],["11:45","Interactive center-building activity · 30 min","Groups built centers using the words each participant randomly selected"],["12:15","Activity recap · 15 min","The class reflected on the exercise and connected observations to national-center development"],["12:30","Syllabus & schedule · 15 min","Review of the course structure, syllabus, and semester schedule"],["12:45","Assignment & course tools · 15 min","Explanation of the website, upcoming assignment, and work expected outside class"]],assignment:{label:"SESSION 01 · FOLLOW-UP",title:"Prepare for the next discussion.",text:"Participants left with an introduction to the website, the course workflow, and the action item for Session 02."}},
-      {iso:"2026-09-01",date:"Sep 01",title:"Core Components of Institutions",detailTitle:"What does a national center need?",description:"Basic components of a national center and what it should include",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira",caption:"Strong national centers align people, purpose, structure, and resources.",agenda:[["11:30","Interactive activity · 15 min","A short collaborative exercise to frame the core components of institutions"],["11:45","General discussion · 45 min","Discussion of the basic components a national center needs in order to exist and operate"],["12:30","Recap · 15 min","Synthesize the main ideas, questions, and institutional components identified by the group"],["12:45","Planning the next class · 10 min","Connect this discussion to the next topic and define the preparation needed"],["12:55","Assignment · 5 min","Review the active action item and expectations for work outside class"]],assignment:{label:"ACTIVE ASSIGNMENT · DUE SEPTEMBER 1",title:"Come up with an idea for a national-scope institution worth building.",text:"Think of a center, institution, or organization you would like to build that is not directly related to your job or schoolwork. Come prepared to discuss its mission and what would be necessary to build it."}},
-      {iso:"2026-09-08",date:"Sep 08",title:"Case Studies",description:"Learning from institutions and national-center models",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
-      {iso:"2026-09-15",date:"Sep 15",title:"Mission",description:"Defining the purpose, direction, and public value of a national center",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
-      {iso:"2026-09-22",date:"Sep 22",title:"Business Plan",description:"Connecting mission, operations, resources, and long-term sustainability",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
+      {iso:"2026-09-01",date:"Sep 01",title:"Mission",detailTitle:"Mission: purpose, value, vision, and direction",description:"Defining institutional purpose and value, distinguishing mission, objectives, and vision, and discussing why they matter to organizational success",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira",caption:"A clear mission connects an institution’s purpose and value with the future it aims to create.",agenda:[["11:30","Mission language · 15 min","Distinguish mission, objectives, and vision and identify the role of each concept"],["11:45","Purpose and value discussion · 45 min","Discuss what an institution exists to accomplish, the value it creates, and why these ideas matter to how it operates"],["12:30","Recap · 15 min","Synthesize the relationships among purpose, value, mission, objectives, and vision"],["12:45","Planning the next class · 10 min","Connect the mission discussion to institutional case studies and business models"],["12:55","Assignment · 5 min","Review the preparation expected for the next session"]],assignment:{label:"SESSION 02 · FOLLOW-UP",title:"Connect mission to an institution.",text:"Use the mission discussion to consider why an institution exists, what value it creates, and how its mission guides its work."}},
+      {iso:"2026-09-08",date:"Sep 08",title:"Case Studies & Business Models",description:"Using institutional case studies to examine how organizations create value, serve their audiences, and sustain their operations",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
+      {iso:"2026-09-15",date:"Sep 15",title:"Pitching for Resources",description:"Communicating value to customers, making a persuasive case, and securing the funding and resources an institution needs",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
+      {iso:"2026-09-22",date:"Sep 22",title:"Core Components of Institutions",description:"Identifying the people, structures, processes, and resources that enable an institution to operate effectively",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
       {iso:"2026-09-29",date:"Sep 29",title:"Local Institution Visit",description:"Learning from the structure and operation of a local institution",milestone:"To be defined",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira"},
       {iso:"2026-10-06",date:"Oct 06",title:"Week 7",description:"Topic to be announced",milestone:"To be defined",moderator:"To be announced"},
       {iso:"2026-10-13",date:"Oct 13",title:"Week 8",description:"Topic to be announced",milestone:"To be defined",moderator:"To be announced"},
@@ -369,6 +384,17 @@
       "Dr. Phi H. Hoang","Sydney Barker","Deborah Obadofin","Nate Semmes","Dr. Jack Koch","Dr. Irene Marti Gil","Christopher K. Toepfer","Owen Plaisance","Nicholas Conrad Coxe","Elise R. Harmon","Dr. Thaiza Rodrigues de Freitas","Mohsen Norouzi","Seyedmajid Hosseini","Victoria E. Denham","Johnnie Kelley","Catherine Norris","Calley Chauvin","Pushpita Nag","Gabrielle Bush","Lillian Bodi","Dr. Yue Liu","Dr. Nathalia Teixeira","Dr. Terrence Tiersch","Jhony Benato"
     ];
     document.getElementById("participantList").innerHTML = participants.map(name => `<article><b>${name}</b></article>`).join("");
+    document.getElementById("topicSuggestionForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const name = document.getElementById("suggestionName").value.trim();
+      const topic = document.getElementById("suggestionTopic").value.trim();
+      const session = document.getElementById("suggestionSession").value.trim() || "No preference";
+      const notes = document.getElementById("suggestionNotes").value.trim() || "No additional notes";
+      const subject = encodeURIComponent("RNR 7029 topic suggestion");
+      const body = encodeURIComponent(`Name: ${name}\nSuggested topic: ${topic}\nPreferred session or date: ${session}\n\nWhy this topic would be useful:\n${notes}`);
+      window.location.href = `mailto:nationalcenterexperts@gmail.com?subject=${subject}&body=${body}`;
+    });
+
     const pageParams = new URLSearchParams(location.search);
     const requestedPage = pageParams.get("page");
     const requestedSession = pageParams.has("session") ? Number(pageParams.get("session")) - 1 : null;
