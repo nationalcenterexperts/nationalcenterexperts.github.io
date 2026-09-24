@@ -33,6 +33,7 @@
         <button type="button" data-tab="syllabus">Syllabus</button>
         <button type="button" data-tab="next-week">Next week</button>
         <button type="button" data-tab="schedule">Schedule</button>
+        <button type="button" data-tab="centers">Centers</button>
         <button type="button" data-tab="resources">Resources</button>
       </div>
       <div class="adminMenu" id="adminMenu">
@@ -42,7 +43,7 @@
         </button>
         <div class="adminDropdown" id="adminDropdown" role="menu">
           <div><span>ORGANIZER ACCESS</span><b>Manage the course</b><p>GitHub will request an authorized account before allowing changes.</p></div>
-          <a href="https://github.com/nationalcenterexperts/nationalcenterexperts.github.io/edit/main/index.html" target="_blank" rel="noopener" role="menuitem"><small>01</small><span><b>Edit course content</b><em>Dates, topics, agenda, and text</em></span></a>
+          <a href="https://github.com/nationalcenterexperts/nationalcenterexperts.github.io/edit/main/index.html" target="_blank" rel="noopener" role="menuitem"><small>01</small><span><b>Edit course content</b><em>Dates, topics, center profiles, and text</em></span></a>
           <a href="https://github.com/nationalcenterexperts/nationalcenterexperts.github.io/upload/main/assets" target="_blank" rel="noopener" role="menuitem"><small>02</small><span><b>Upload course files</b><em>Add weekly materials to Assets</em></span></a>
           <a href="https://github.com/nationalcenterexperts/nationalcenterexperts.github.io" target="_blank" rel="noopener" role="menuitem"><small>03</small><span><b>Open repository</b><em>Review files and publication history</em></span></a>
           <p class="adminHint">Changes become public after they are committed to the main branch.</p>
@@ -63,6 +64,7 @@
           <button type="button" data-tab="syllabus"><span>Syllabus</span></button>
           <button type="button" data-tab="next-week"><span>Next week</span></button>
           <button type="button" data-tab="schedule"><span>Schedule</span></button>
+          <button type="button" data-tab="centers"><span>Centers</span></button>
           <button type="button" data-tab="resources"><span>Resources</span></button>
         </div>
       </div>
@@ -253,6 +255,16 @@
         </section>
       </article>
 
+      <article class="windowPanel centersPanel staticPanel" id="centers-panel" data-panel="centers" hidden>
+        <div class="panelHeading compact">
+          <p class="sectionLabel">CENTER WORKSPACE</p>
+          <h2>Four ideas becoming real institutions.</h2>
+          <p>Each center has its own evolving page for purpose, audience, activities, progress, and public channels.</p>
+        </div>
+        <div class="centerDirectory" id="centerDirectory" aria-label="Course center pages"></div>
+        <section class="centerProfile" id="centerProfile" aria-live="polite" hidden></section>
+      </article>
+
       <article class="windowPanel resourcesPanel staticPanel" id="resources-panel" data-panel="resources" hidden>
         <div class="panelHeading compact"><p class="sectionLabel">COURSE LIBRARY</p><h2>Shared knowledge, carefully organized.</h2><p>Readings, presentations, and other public course materials will be available here.</p></div>
         <figure class="sectionPhoto"><img src="assets/section-resources-aquatic-v2.webp" alt="Organized course materials beside a shared data workspace"><figcaption>Accessible readings, tools, and materials support learning across the class.</figcaption></figure>
@@ -274,8 +286,14 @@
   </main>
 
   <script>
-    const tabs = ["home","about","participants","contact","syllabus","next-week","schedule","resources"];
-    const labels = {home:"HOME",about:"ABOUT US",participants:"PARTICIPANTS",contact:"CONTACT",syllabus:"SYLLABUS","next-week":"NEXT WEEK",schedule:"SCHEDULE",resources:"RESOURCES"};
+    const tabs = ["home","about","participants","contact","syllabus","next-week","schedule","centers","resources"];
+    const labels = {home:"HOME",about:"ABOUT US",participants:"PARTICIPANTS",contact:"CONTACT",syllabus:"SYLLABUS","next-week":"NEXT WEEK",schedule:"SCHEDULE",centers:"CENTERS",resources:"RESOURCES"};
+    const centers = [
+      {name:"Center 1",group:"Group 1",status:"In development",mission:"To be defined by the group.",audience:"To be defined by the group.",activities:"Activities will be added as the strategy develops.",action:"Select and complete one feasible first action.",socials:{website:"",instagram:"",linkedin:"",youtube:""},updates:[]},
+      {name:"Center 2",group:"Group 2",status:"In development",mission:"To be defined by the group.",audience:"To be defined by the group.",activities:"Activities will be added as the strategy develops.",action:"Select and complete one feasible first action.",socials:{website:"",instagram:"",linkedin:"",youtube:""},updates:[]},
+      {name:"Center 3",group:"Group 3",status:"In development",mission:"To be defined by the group.",audience:"To be defined by the group.",activities:"Activities will be added as the strategy develops.",action:"Select and complete one feasible first action.",socials:{website:"",instagram:"",linkedin:"",youtube:""},updates:[]},
+      {name:"Center 4",group:"Group 4",status:"In development",mission:"To be defined by the group.",audience:"To be defined by the group.",activities:"Activities will be added as the strategy develops.",action:"Select and complete one feasible first action.",socials:{website:"",instagram:"",linkedin:"",youtube:""},updates:[]}
+    ];
     const sessions = [
       {iso:"2026-08-25",date:"Aug 25",title:"Greetings & Introduction",detailTitle:"Greetings, introductions, and a first shared experience",description:"Participant introductions, course expectations, and an interactive center-building activity",milestone:"Shared expectations established",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira",caption:"The course began by connecting individual expectations with a collaborative exercise in building national centers.",agenda:[["11:30","Introductions & expectations · 15 min","Participants introduced themselves and shared their expectations for the course"],["11:45","Interactive center-building activity · 30 min","Groups built centers using the words each participant randomly selected"],["12:15","Activity recap · 15 min","The class reflected on the exercise and connected observations to national-center development"],["12:30","Syllabus & schedule · 15 min","Review of the course structure, syllabus, and semester schedule"],["12:45","Assignment & course tools · 15 min","Explanation of the website, upcoming assignment, and work expected outside class"]],assignment:{label:"SESSION 01 · FOLLOW-UP",title:"Prepare for the next discussion.",text:"Participants left with an introduction to the website, the course workflow, and the action item for Session 02."}},
       {iso:"2026-09-01",date:"Sep 01",title:"Mission",detailTitle:"Mission, partnership, and institutional purpose",description:"Exploratory mission discussion, mission-focused activity, partner formation, and short group presentations",milestone:"Institution missions presented",moderator:"Dr. Yue Liu · Jhony Benato · Dr. Nathalia Teixeira",caption:"The session connected mission, purpose, partnership, and concise presentations.",agenda:[["11:30","Updates & announcements · 5 min","Course updates and announcements"],["11:35","Exploratory discussion · 15 min","Discuss the meaning and importance of an institution's mission"],["11:50","Assignment activity · 20 min","Define the mission of the proposed center"],["12:10","Grouping interaction · 15 min","Find partners and form working groups"],["12:25","Group presentations · 25 min","Each group had three minutes to present and two minutes for questions"],["12:50","Recap, assignment & website · 10 min","Review the discussion, next assignment, and course website"]],assignment:{label:"SESSION 02 · FOLLOW-UP",title:"Continue developing the institution concept.",text:"Use the mission discussion and group formation to prepare for institutional case studies and business-model analysis."}},
@@ -332,6 +350,66 @@
       document.getElementById("assignmentText").textContent = assignment.text;
       document.getElementById("assignmentBadge").hidden = !isNextSession;
       document.getElementById("assignmentCard").classList.toggle("activeAssignment", isNextSession);
+    }
+
+    function centerPageUrl(index) {
+      const params = new URLSearchParams({page:"centers",center:String(index + 1)});
+      return `?${params.toString()}`;
+    }
+
+    function renderCenters(centerIndex = null) {
+      const directory = document.getElementById("centerDirectory");
+      const profile = document.getElementById("centerProfile");
+      const validIndex = Number.isInteger(centerIndex) && centerIndex >= 0 && centerIndex < centers.length;
+      if (!validIndex) {
+        profile.hidden = true;
+        directory.hidden = false;
+        directory.innerHTML = centers.map((center,index) => `
+          <a class="centerCard" href="${centerPageUrl(index)}" aria-label="Open ${center.name} page">
+            <span class="centerNumber">${String(index + 1).padStart(2,"0")}</span>
+            <small>${center.group.toUpperCase()} · ${center.status.toUpperCase()}</small>
+            <h3>${center.name}</h3>
+            <p>${center.mission}</p>
+            <b>Open center page →</b>
+          </a>
+        `).join("");
+        return;
+      }
+
+      const center = centers[centerIndex];
+      const socialLabels = {website:"Website",instagram:"Instagram",linkedin:"LinkedIn",youtube:"YouTube"};
+      const socialLinks = Object.entries(socialLabels).map(([key,label]) => center.socials[key]
+        ? `<a href="${center.socials[key]}" target="_blank" rel="noopener">${label} ↗</a>`
+        : `<span>${label}<small>Link coming soon</small></span>`
+      ).join("");
+      const updates = center.updates.length
+        ? center.updates.map(update => `<article><time>${update.date}</time><div><h4>${update.title}</h4><p>${update.text}</p></div></article>`).join("")
+        : `<p class="centerEmptyState">Meeting updates, decisions, and completed actions will appear here as the center develops.</p>`;
+
+      directory.hidden = true;
+      profile.hidden = false;
+      profile.innerHTML = `
+        <a class="centerBack" href="?page=centers">← All centers</a>
+        <header class="centerProfileHeader">
+          <div><span>CENTER ${String(centerIndex + 1).padStart(2,"0")} · ${center.group.toUpperCase()}</span><h2>${center.name}</h2><p>This page will evolve as the group defines its purpose, operation, and public presence.</p></div>
+          <b>${center.status}</b>
+        </header>
+        <div class="centerProfileGrid">
+          <article><span>MISSION</span><h3>Why this center exists</h3><p>${center.mission}</p></article>
+          <article><span>AUDIENCE</span><h3>Who the center serves</h3><p>${center.audience}</p></article>
+          <article><span>ACTIVITIES</span><h3>How the center creates value</h3><p>${center.activities}</p></article>
+          <article><span>CURRENT ACTION</span><h3>What happens next</h3><p>${center.action}</p></article>
+        </div>
+        <section class="centerSocials" aria-label="${center.name} social links">
+          <div><span>PUBLIC CHANNELS</span><h3>Website and social media</h3><p>Links will become active as the group creates each channel.</p></div>
+          <nav>${socialLinks}</nav>
+        </section>
+        <section class="centerUpdates">
+          <div><span>PROGRESS LOG</span><h3>Updates from the meetings</h3></div>
+          <div class="centerUpdateList">${updates}</div>
+        </section>
+      `;
+      document.title = `${center.name} | RNR 7029`;
     }
 
     function pageUrl(id, sessionIndex = null) {
@@ -392,10 +470,12 @@
     }
     const requestedPage = pageParams.get("page");
     const requestedSession = pageParams.has("session") ? Number(pageParams.get("session")) - 1 : null;
+    const requestedCenter = pageParams.has("center") ? Number(pageParams.get("center")) - 1 : null;
     const hashMatch = location.hash.slice(1).match(/^next-week-(\d+)$/);
     if (requestedPage) openTab(requestedPage, false, requestedSession);
     else if (hashMatch) openTab("next-week", false, Number(hashMatch[1]) - 1);
     else openTab(location.hash.slice(1) || "home", false);
+    renderCenters(requestedPage === "centers" ? requestedCenter : null);
   </script>
 </body>
 </html>
