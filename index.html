@@ -11,7 +11,7 @@
   <meta property="og:image" content="https://nationalcenterexperts.github.io/assets/hero-aquatic-center-v2.webp">
   <title>RNR 7029 | Building National Centers</title>
   <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css?v=schedule-intro-v2">
+  <link rel="stylesheet" href="assets/site.css?v=workshops-v1">
 </head>
 <body>
   <main>
@@ -34,6 +34,7 @@
         <button type="button" data-tab="next-week">Next week</button>
         <button type="button" data-tab="schedule">Schedule</button>
         <button type="button" data-tab="centers">Centers</button>
+        <button type="button" data-tab="workshops">Workshops</button>
         <button type="button" data-tab="resources">Resources</button>
       </div>
       <div class="adminMenu" id="adminMenu">
@@ -65,6 +66,7 @@
           <button type="button" data-tab="next-week"><span>Next week</span></button>
           <button type="button" data-tab="schedule"><span>Schedule</span></button>
           <button type="button" data-tab="centers"><span>Centers</span></button>
+          <button type="button" data-tab="workshops"><span>Workshops</span></button>
           <button type="button" data-tab="resources"><span>Resources</span></button>
         </div>
       </div>
@@ -265,6 +267,73 @@
         <section class="centerProfile" id="centerProfile" aria-live="polite" hidden></section>
       </article>
 
+
+      <article class="windowPanel workshopsPanel staticPanel" id="workshops-panel" data-panel="workshops" hidden>
+        <div class="panelHeading compact">
+          <p class="sectionLabel">LEARNING BEYOND THE CLASSROOM</p>
+          <h2>Workshops that turn shared interests into shared experiences.</h2>
+          <p>Hands-on gatherings where the class explores ideas, cultures, and practices through conversation and participation.</p>
+        </div>
+
+        <section class="workshopFeature" aria-labelledby="caffeine-workshop-title">
+          <div class="workshopHero">
+            <img src="assets/workshops/caffeine-workshop-community.jpeg" alt="Participants gathered around a table during the caffeine workshop">
+            <div class="workshopHeroCopy">
+              <p class="workshopMeta">WORKSHOP 01 · NOVEMBER 6, 2026</p>
+              <h3 id="caffeine-workshop-title">Caffeine, Culture &amp; Connection</h3>
+              <p>Our first workshop explored caffeine not only as an ingredient, but as a shared cultural practice. Through tasting, storytelling, and conversation, participants discovered how coffee and tea can create space for curiosity, hospitality, and human connection.</p>
+            </div>
+          </div>
+
+          <div class="workshopStory">
+            <article>
+              <span>01</span>
+              <h4>Tea, tradition, and hospitality</h4>
+              <p>Participants tasted teas of Iranian origin while learning about their history and the role tea plays in culture, hospitality, and everyday life.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h4>Coffee through different preparations</h4>
+              <p>The tasting included two Vietnamese-style coffee preparations made with condensed milk, known for their intense flavor, alongside two traditional coffees with different roasts, aromas, and flavor profiles.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h4>Food, conversation, and community</h4>
+              <p>Grostoli—a light, crisp fried pastry—accompanied the drinks as participants exchanged stories and socialized. The experience showed how a simple cup can become a bridge between people.</p>
+            </article>
+          </div>
+
+          <figure class="workshopDetailPhoto">
+            <img src="assets/workshops/caffeine-workshop-tasting.jpeg" alt="Coffee, tea, condensed milk, and grostoli prepared for the workshop tasting">
+            <figcaption>A shared table invited participants to compare preparations, flavors, aromas, and cultural traditions.</figcaption>
+          </figure>
+
+          <div class="workshopTakeaway">
+            <p class="sectionLabel">WHAT WE TOOK WITH US</p>
+            <blockquote>Connection can begin with something as familiar as a cup of coffee or tea—and grow through the stories, traditions, and people gathered around it.</blockquote>
+          </div>
+
+          <section class="workshopMedia" aria-labelledby="workshop-media-title">
+            <div class="workshopMediaHeading">
+              <div><p class="sectionLabel">MOMENTS FROM THE WORKSHOP</p><h3 id="workshop-media-title">Watch the experience</h3></div>
+              <p>Short scenes from the preparation, tasting, and conversations that shaped the day.</p>
+            </div>
+            <div class="workshopVideoGrid">
+              <figure><video controls preload="metadata" playsinline src="assets/workshops/caffeine-workshop-01.mp4"></video><figcaption>Preparing and sharing</figcaption></figure>
+              <figure><video controls preload="metadata" playsinline src="assets/workshops/caffeine-workshop-02.mp4"></video><figcaption>Tasting and comparison</figcaption></figure>
+              <figure><video controls preload="metadata" playsinline src="assets/workshops/caffeine-workshop-03.mp4"></video><figcaption>Culture through conversation</figcaption></figure>
+              <figure><video controls preload="metadata" playsinline src="assets/workshops/caffeine-workshop-04.mp4"></video><figcaption>Coffee as connection</figcaption></figure>
+            </div>
+          </section>
+        </section>
+
+        <section class="workshopComingNext">
+          <p class="sectionLabel">THE SERIES CONTINUES</p>
+          <h3>More workshops will be added as new ideas take shape.</h3>
+          <p>Each gathering will document what participants explored, made, discussed, and learned together.</p>
+        </section>
+      </article>
+
       <article class="windowPanel resourcesPanel staticPanel" id="resources-panel" data-panel="resources" hidden>
         <div class="panelHeading compact"><p class="sectionLabel">COURSE LIBRARY</p><h2>Shared knowledge, carefully organized.</h2><p>Readings, presentations, and other public course materials will be available here.</p></div>
         <figure class="sectionPhoto"><img src="assets/section-resources-aquatic-v2.webp" alt="Organized course materials beside a shared data workspace"><figcaption>Accessible readings, tools, and materials support learning across the class.</figcaption></figure>
@@ -286,8 +355,8 @@
   </main>
 
   <script>
-    const tabs = ["home","about","participants","contact","syllabus","next-week","schedule","centers","resources"];
-    const labels = {home:"HOME",about:"ABOUT US",participants:"PARTICIPANTS",contact:"CONTACT",syllabus:"SYLLABUS","next-week":"NEXT WEEK",schedule:"SCHEDULE",centers:"CENTERS",resources:"RESOURCES"};
+    const tabs = ["home","about","participants","contact","syllabus","next-week","schedule","centers","workshops","resources"];
+    const labels = {home:"HOME",about:"ABOUT US",participants:"PARTICIPANTS",contact:"CONTACT",syllabus:"SYLLABUS","next-week":"NEXT WEEK",schedule:"SCHEDULE",centers:"CENTERS",workshops:"WORKSHOPS",resources:"RESOURCES"};
     const centers = [
       {name:"Center 1",group:"Group 1",status:"In development",mission:"To be defined by the group.",audience:"To be defined by the group.",activities:"Activities will be added as the strategy develops.",action:"Select and complete one feasible first action.",socials:{website:"",instagram:"",linkedin:"",youtube:""},updates:[]},
       {name:"Center 2",group:"Group 2",status:"In development",mission:"To be defined by the group.",audience:"To be defined by the group.",activities:"Activities will be added as the strategy develops.",action:"Select and complete one feasible first action.",socials:{website:"",instagram:"",linkedin:"",youtube:""},updates:[]},
